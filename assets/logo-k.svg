@@ -6,18 +6,14 @@
     .sub   { fill: #0b0b0b; fill-opacity: .55; }
     .inkS  { stroke: #0b0b0b; }
     .thread{ fill: none; stroke-width: 5.2; stroke-linecap: round; }
-    .kbB { fill: #2a78d6; }
-    .kbO { fill: #eb6834; }
-    .kb  { animation: kbin .45s cubic-bezier(.3,0,.4,1) both; }
-    @keyframes kbin { from { opacity: 0; } to { opacity: 1; } }
+    .kblue  { fill: none; stroke: url(#gBlue);   stroke-width: 7; stroke-linecap: round; }
+    .korange{ fill: none; stroke: url(#gOrange); stroke-width: 7; stroke-linecap: round; }
     .draw   { stroke-dasharray: 100; stroke-dashoffset: 0; animation: weave 1.5s cubic-bezier(.55,0,.2,1) both; }
     @keyframes weave { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
-    @media (prefers-reduced-motion: reduce) { .draw, .kb { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .draw { animation: none; } }
     @media (prefers-color-scheme: dark) {
       .ink  { fill: #f2f2f0; }
       .soft { fill: #c9c9c6; }
-      .kbB  { fill: #3987e5; }
-      .kbO  { fill: #ee7a42; }
       .sub  { fill: #f2f2f0; }
       .inkS { stroke: #f2f2f0; }
     }
@@ -31,6 +27,6 @@
     </linearGradient>
   </defs>
   <g transform="translate(17,82) scale(1.62)">
-    <g transform="translate(0,0)"><rect class="ink kb" style="animation-delay:0.00s" x="4.44" y="-40" width="7.56" height="8.65" rx="1.2"/><rect class="ink kb" style="animation-delay:0.07s" x="4.44" y="-29.55" width="7.56" height="8.65" rx="1.2"/><rect class="ink kb" style="animation-delay:0.14s" x="4.44" y="-19.1" width="7.56" height="8.65" rx="1.2"/><rect class="ink kb" style="animation-delay:0.21s" x="4.44" y="-8.65" width="7.56" height="8.65" rx="1.2"/><g transform="translate(30.28,-36.23) rotate(136.1)"><rect class="kb kbB" style="animation-delay:0.30s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(25.25,-31.55) rotate(138.3)"><rect class="kb kbB" style="animation-delay:0.39s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(20.23,-27.31) rotate(141.5)"><rect class="kb kbB" style="animation-delay:0.48s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(15.60,-23.89) rotate(145.8)"><rect class="kb kbB" style="animation-delay:0.57s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(15.76,-16.54) rotate(33.2)"><rect class="kb kbO" style="animation-delay:0.66s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(20.81,-12.98) rotate(37.0)"><rect class="kb kbO" style="animation-delay:0.75s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(26.03,-8.77) rotate(40.9)"><rect class="kb kbO" style="animation-delay:0.84s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g><g transform="translate(30.86,-4.28) rotate(45.0)"><rect class="kb kbO" style="animation-delay:0.93s" x="-2.80" y="-3.45" width="5.6" height="6.9" rx="1.8"/></g></g>
+    <g transform="translate(0,0)"><path class="kblue draw" pathLength="100" style="animation-delay:.3s" d="M 31.6 -37.2 C 24.5 -30.5, 17 -25.2, 7.4 -22.6"/><rect class="ink" x="4.44" y="-40.0" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-34.1" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-28.2" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-22.3" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-16.4" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-10.5" width="7.56" height="4.6" rx="1.0"/><rect class="ink" x="4.44" y="-4.6" width="7.56" height="4.6" rx="1.0"/><path class="korange draw" pathLength="100" style="animation-delay:.42s" d="M 8.2 -20.6 C 17.5 -15.5, 26.5 -8.5, 32.6 -2.6"/></g>
   </g>
 </svg>
