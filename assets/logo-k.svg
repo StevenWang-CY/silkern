@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img"
+     aria-label="SILKern K icon: a capital K whose stem is a stack of paged-KV tile blocks and whose diagonals are the two kernel threads, blue woven under the stem and orange woven over it. K for kernels, and for top-k.">
+  <style>
+    .ink    { fill: #0b0b0b; }
+    .blue   { stroke: url(#gBlue); }
+    .orange { stroke: url(#gOrange); }
+    .kthread{ fill: none; stroke-width: 9; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) { .ink { fill: #f2f2f0; } }
+  </style>
+  <defs>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a78d6"/><stop offset="1" stop-color="#4a9be6"/>
+    </linearGradient>
+    <linearGradient id="gOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eb6834"/><stop offset="1" stop-color="#f2914f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stem: four paged-KV tiles, the ordered prefix. Blue thread tucks under the
+       stem; orange emerges over it - the same weave as the main mark. -->
+  <g transform="translate(17,12) scale(1.8)">
+    <path class="kthread blue" style="stroke-width:5" d="M 31 1 C 24 9, 18 17, 5 24.5"/>
+    <rect class="ink" x="0" y="0"    width="8" height="8.5" rx="2"/>
+    <rect class="ink" x="0" y="10.5" width="8" height="8.5" rx="2"/>
+    <rect class="ink" x="0" y="21"   width="8" height="8.5" rx="2"/>
+    <rect class="ink" x="0" y="31.5" width="8" height="8.5" rx="2"/>
+    <path class="kthread orange" style="stroke-width:5" d="M 5 24 C 14 29.5, 24 35, 32 39"/>
+  </g>
+</svg>

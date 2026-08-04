@@ -1,0 +1,21 @@
+SILKern
+Copyright The SILKern Authors
+
+This product includes software developed by The SILKern Authors.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------
+
+Third-party references
+
+`silkern/integrations/vllm.py` implements a drop-in replacement for the
+allocation-owning `triton_filter_and_convert_dcp_index` converter used by
+vLLM's sparse MLA attention backend. No vLLM source is vendored in this
+repository. The upstream revision the adapter's call signature, geometry
+envelope, and file digests were checked against is recorded as
+`UPSTREAM_COMMIT` and the `UPSTREAM_*_SHA256` constants in that module.
+
+  vLLM -- https://github.com/vllm-project/vllm -- Apache License 2.0
+  SGLang -- https://github.com/sgl-project/sglang -- Apache License 2.0
+
+Inclusion of these references does not imply endorsement by either project.

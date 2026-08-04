@@ -1,0 +1,838 @@
+{
+  "atomic_differential": {
+    "passed": 13,
+    "total": 13
+  },
+  "canaries": {
+    "passed": 3,
+    "total": 3
+  },
+  "claim_boundary": "single NVIDIA B200 standalone exact-contract correctness, guarded-memory, fixed-address graph, and exploratory component engineering; not a production-wrapper, downstream-attention, full-model, serving, portability, mechanism, or confirmatory performance result",
+  "compiled_resources": {
+    "hierarchical_fill": {
+      "compiled_variants": 2,
+      "registers_max": 8,
+      "registers_min": 8,
+      "shared_bytes_max": 0,
+      "spills_max": 0
+    },
+    "hierarchical_map": {
+      "compiled_variants": 115,
+      "registers_max": 23,
+      "registers_min": 22,
+      "shared_bytes_max": 16,
+      "spills_max": 0
+    },
+    "hierarchical_prefix": {
+      "compiled_variants": 8,
+      "registers_max": 18,
+      "registers_min": 12,
+      "shared_bytes_max": 0,
+      "spills_max": 0
+    },
+    "hierarchical_scatter": {
+      "compiled_variants": 12,
+      "registers_max": 22,
+      "registers_min": 20,
+      "shared_bytes_max": 0,
+      "spills_max": 0
+    },
+    "pinned_atomic": {
+      "compiled_variants": 13,
+      "registers_max": 21,
+      "registers_min": 18,
+      "shared_bytes_max": 16,
+      "spills_max": 0
+    },
+    "row_stable": {
+      "compiled_variants": 115,
+      "registers_max": 102,
+      "registers_min": 14,
+      "shared_bytes_max": 4096,
+      "spills_max": 0
+    }
+  },
+  "correctness": {
+    "passed": 131,
+    "total": 131
+  },
+  "coverage": {
+    "checks": {
+      "block_sizes": true,
+      "compacting_and_noncompacting": true,
+      "dcp_sizes": true,
+      "every_rank": true,
+      "interleaves": true,
+      "ownership_profiles": true,
+      "table_profiles": true,
+      "widths": true
+    },
+    "gate_pass": true,
+    "observed": {
+      "block_sizes": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "compact": [
+        false,
+        true
+      ],
+      "dcp_sizes": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "interleaves": [
+        1,
+        2,
+        4
+      ],
+      "ownership_profiles": [
+        "empty",
+        "expected",
+        "nearly_full",
+        "one",
+        "skewed"
+      ],
+      "ranks": {
+        "1": [
+          0
+        ],
+        "2": [
+          0,
+          1
+        ],
+        "4": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "8": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "table_profiles": [
+        "fragmented",
+        "identity",
+        "negative_entry",
+        "permuted"
+      ],
+      "widths": [
+        1,
+        63,
+        64,
+        127,
+        128,
+        129,
+        255,
+        256,
+        257,
+        511,
+        512,
+        513,
+        1024,
+        2048,
+        4096
+      ]
+    }
+  },
+  "decision": "pass_target_standalone_engineering",
+  "exclusivity_pass": true,
+  "experiment": "E65_SM100_exact_contract_standalone_engineering",
+  "gates": {
+    "atomic_differential": true,
+    "canaries": true,
+    "coverage": true,
+    "exclusivity": true,
+    "graph": true,
+    "planned_counts": true,
+    "raw_complete": true,
+    "source_identity": true,
+    "stable_correctness": true,
+    "target_manifest": true,
+    "timing_correctness": true
+  },
+  "graph": {
+    "arms": {
+      "atomic": {
+        "checkpoints_pass": true,
+        "fixed_addresses": true,
+        "gate_pass": true,
+        "inputs_unchanged": true,
+        "memory_allocated_stable": true,
+        "observed_checkpoints": [
+          0,
+          1,
+          10,
+          100,
+          1000,
+          10000
+        ],
+        "unique_output_hashes": 6
+      },
+      "hierarchical_stable": {
+        "checkpoints_pass": true,
+        "fixed_addresses": true,
+        "gate_pass": true,
+        "inputs_unchanged": true,
+        "memory_allocated_stable": true,
+        "observed_checkpoints": [
+          0,
+          1,
+          10,
+          100,
+          1000,
+          10000
+        ],
+        "unique_output_hashes": 1
+      },
+      "row_stable": {
+        "checkpoints_pass": true,
+        "fixed_addresses": true,
+        "gate_pass": true,
+        "inputs_unchanged": true,
+        "memory_allocated_stable": true,
+        "observed_checkpoints": [
+          0,
+          1,
+          10,
+          100,
+          1000,
+          10000
+        ],
+        "unique_output_hashes": 1
+      }
+    },
+    "gate_pass": true
+  },
+  "graph_replays": 10000,
+  "mode": "full",
+  "next_gate": "freeze E67 trace census and production-wrapper/downstream-attention correctness before any confirmatory E65 timing",
+  "schema_version": 1,
+  "source_identity": {
+    "chronology_boundary": "protocol, collector, analyzer, tests, and runner were committed and pushed at base_commit before the recorded rental start; hashes establish the exact executed content",
+    "files": [
+      {
+        "expected_sha256": "b65995abbe61230af717e3ddf5455f54f9a6e9e7e82da5933ea7379a845882da",
+        "observed_sha256": "b65995abbe61230af717e3ddf5455f54f9a6e9e7e82da5933ea7379a845882da",
+        "pass": true,
+        "path": "analysis/e65_sm100_exact_report.py"
+      },
+      {
+        "expected_sha256": "1bf08614ebbc186d43d29a9e86931e7bb9dd8e4eb7dadddac7827fe2b7e99546",
+        "observed_sha256": "1bf08614ebbc186d43d29a9e86931e7bb9dd8e4eb7dadddac7827fe2b7e99546",
+        "pass": true,
+        "path": "analysis/e65_sm120_exact_report.py"
+      },
+      {
+        "expected_sha256": "4e8ce2ce2948c9e17822ee6bcd9297e3693092dfa851afec103102b4761f8456",
+        "observed_sha256": "4e8ce2ce2948c9e17822ee6bcd9297e3693092dfa851afec103102b4761f8456",
+        "pass": true,
+        "path": "docs/PROTOCOL-E65-SM100-EXACT-ENGINEERING.md"
+      },
+      {
+        "expected_sha256": "48290b0ba753cdd05541b7b102176471ddab0961ca597a26ecaad53b79172000",
+        "observed_sha256": "48290b0ba753cdd05541b7b102176471ddab0961ca597a26ecaad53b79172000",
+        "pass": true,
+        "path": "regatta/dcp_stable_compact.py"
+      },
+      {
+        "expected_sha256": "f096b2a2bc4c63155409960453e8b76d9b2ea539a09321156c0b7fd4fede357c",
+        "observed_sha256": "f096b2a2bc4c63155409960453e8b76d9b2ea539a09321156c0b7fd4fede357c",
+        "pass": true,
+        "path": "scripts/e65_run_b200_exact.sh"
+      },
+      {
+        "expected_sha256": "7cd8a84f5c3cfd321dcd2c453536f7132224b3a1ed8efa19b151fb97bbb4ce19",
+        "observed_sha256": "7cd8a84f5c3cfd321dcd2c453536f7132224b3a1ed8efa19b151fb97bbb4ce19",
+        "pass": true,
+        "path": "scripts/e65_sm100_exact_engineering.py"
+      },
+      {
+        "expected_sha256": "e963c96737a4dedafb6b985119bec4bef260cf0a9b9855bf278ddf141b293b21",
+        "observed_sha256": "e963c96737a4dedafb6b985119bec4bef260cf0a9b9855bf278ddf141b293b21",
+        "pass": true,
+        "path": "scripts/e65_sm120_exact_qualification.py"
+      },
+      {
+        "expected_sha256": "2705903bdeb6a5ce78cca368e834620f46bbb5f8a78a346bc1fbe278d9a578fd",
+        "observed_sha256": "2705903bdeb6a5ce78cca368e834620f46bbb5f8a78a346bc1fbe278d9a578fd",
+        "pass": true,
+        "path": "tests/test_dcp_exact_stable_compact.py"
+      },
+      {
+        "expected_sha256": "97c262196c826203dd07be85778301dcfcf61e40914701e5673b567e9b9847dd",
+        "observed_sha256": "97c262196c826203dd07be85778301dcfcf61e40914701e5673b567e9b9847dd",
+        "pass": true,
+        "path": "tests/test_dcp_exact_stable_compact_gpu.py"
+      },
+      {
+        "expected_sha256": "bc3cef1262f11265b9668487113a9f4fe4693c136c76648b74a620dbc5274dbf",
+        "observed_sha256": "bc3cef1262f11265b9668487113a9f4fe4693c136c76648b74a620dbc5274dbf",
+        "pass": true,
+        "path": "tests/test_e65_sm100_exact_engineering.py"
+      }
+    ],
+    "gate_pass": true,
+    "observed_freeze_sha256": "4031ff7a27b80d528ae849c9a0ff5ebd296b366bb4c4e296cc5d27f2610f6348",
+    "pinned_source_pass": true,
+    "recorded_freeze_sha256": "4031ff7a27b80d528ae849c9a0ff5ebd296b366bb4c4e296cc5d27f2610f6348"
+  },
+  "target_manifest": {
+    "checks": {
+      "b200_name": true,
+      "base_commit": true,
+      "budget_cap": true,
+      "one_rented_gpu": true,
+      "one_visible_device": true,
+      "ops_hash": true,
+      "ops_payload": true,
+      "parent_prerequisites": true,
+      "sm100": true
+    },
+    "gate_pass": true
+  },
+  "timing": [
+    {
+      "cell": {
+        "batch": 8,
+        "block_size": 64,
+        "cell_id": "T0",
+        "compact": true,
+        "dcp_rank": 0,
+        "dcp_size": 2,
+        "interleave": 1,
+        "ownership_profile": "expected",
+        "seed": 660000,
+        "table_profile": "fragmented",
+        "width": 512
+      },
+      "gate_pass": true,
+      "paired_ratio_summary": {
+        "hierarchical_over_atomic": {
+          "geometric_mean": 1.1641726061508533,
+          "max": 1.331235246280017,
+          "min": 1.0002071159266315
+        },
+        "hierarchical_over_row": {
+          "geometric_mean": 2.2478932233604207,
+          "max": 2.8837953270516703,
+          "min": 2.0533717192616017
+        },
+        "row_over_atomic": {
+          "geometric_mean": 0.5178949756387929,
+          "max": 0.6455378375960056,
+          "min": 0.45879731031231213
+        }
+      },
+      "seed_count": 5,
+      "seeds": [
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.817439794540405,
+            "hierarchical_stable": 8.224000036716461,
+            "row_stable": 4.005119949579239
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.2063179557966128,
+            "hierarchical_over_row": 2.0533717192616017,
+            "row_over_atomic": 0.5874815282984457
+          },
+          "tensor_seed": 660000
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.181599795818329,
+            "hierarchical_stable": 6.182880103588104,
+            "row_stable": 2.8673599660396576
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.0002071159266315,
+            "hierarchical_over_row": 2.156297143301397,
+            "row_over_atomic": 0.4638540282046959
+          },
+          "tensor_seed": 660001
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.181759834289551,
+            "hierarchical_stable": 8.225600123405457,
+            "row_stable": 3.9905598759651184
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.330624343860618,
+            "hierarchical_over_row": 2.0612646794119565,
+            "row_over_atomic": 0.6455378375960056
+          },
+          "tensor_seed": 660002
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.178240180015564,
+            "hierarchical_stable": 6.181440055370331,
+            "row_stable": 2.834559977054596
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.0005179266686843,
+            "hierarchical_over_row": 2.1807406106797194,
+            "row_over_atomic": 0.45879731031231213
+          },
+          "tensor_seed": 660003
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.177120208740234,
+            "hierarchical_stable": 8.223200142383575,
+            "row_stable": 2.8515200316905975
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.331235246280017,
+            "hierarchical_over_row": 2.8837953270516703,
+            "row_over_atomic": 0.4616261195072547
+          },
+          "tensor_seed": 660004
+        }
+      ]
+    },
+    {
+      "cell": {
+        "batch": 8,
+        "block_size": 64,
+        "cell_id": "T1",
+        "compact": true,
+        "dcp_rank": 0,
+        "dcp_size": 2,
+        "interleave": 1,
+        "ownership_profile": "expected",
+        "seed": 660001,
+        "table_profile": "fragmented",
+        "width": 2048
+      },
+      "gate_pass": true,
+      "paired_ratio_summary": {
+        "hierarchical_over_atomic": {
+          "geometric_mean": 1.2753400454913575,
+          "max": 1.3316507280352554,
+          "min": 1.1441706615738856
+        },
+        "hierarchical_over_row": {
+          "geometric_mean": 1.9892634402233629,
+          "max": 1.9909773798322863,
+          "min": 1.986182600499714
+        },
+        "row_over_atomic": {
+          "geometric_mean": 0.6411116897358538,
+          "max": 0.6690222755109111,
+          "min": 0.5754357824262564
+        }
+      },
+      "seed_count": 5,
+      "seeds": [
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.566239893436432,
+            "hierarchical_stable": 8.228320181369781,
+            "row_stable": 4.134079962968826
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.253125124105617,
+            "hierarchical_over_row": 1.990363092894976,
+            "row_over_atomic": 0.6295962423031823
+          },
+          "tensor_seed": 660100
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.183840036392212,
+            "hierarchical_stable": 8.210720121860504,
+            "row_stable": 4.133920073509216
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3277704587343786,
+            "hierarchical_over_row": 1.986182600499714,
+            "row_over_atomic": 0.6685037208564399
+          },
+          "tensor_seed": 660101
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.181280016899109,
+            "hierarchical_stable": 8.226400017738342,
+            "row_stable": 4.131840020418167
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3308570385499514,
+            "hierarchical_over_row": 1.9909773798322863,
+            "row_over_atomic": 0.6684440777835752
+          },
+          "tensor_seed": 660102
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 7.187039852142334,
+            "hierarchical_stable": 8.223200142383575,
+            "row_stable": 4.13567990064621
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.1441706615738856,
+            "hierarchical_over_row": 1.9883550806479682,
+            "row_over_atomic": 0.5754357824262564
+          },
+          "tensor_seed": 660103
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.180960237979889,
+            "hierarchical_stable": 8.230880200862885,
+            "row_stable": 4.135200083255768
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3316507280352554,
+            "hierarchical_over_row": 1.9904430342297885,
+            "row_over_atomic": 0.6690222755109111
+          },
+          "tensor_seed": 660104
+        }
+      ]
+    },
+    {
+      "cell": {
+        "batch": 32,
+        "block_size": 64,
+        "cell_id": "T2",
+        "compact": true,
+        "dcp_rank": 0,
+        "dcp_size": 2,
+        "interleave": 1,
+        "ownership_profile": "expected",
+        "seed": 660002,
+        "table_profile": "fragmented",
+        "width": 2048
+      },
+      "gate_pass": true,
+      "paired_ratio_summary": {
+        "hierarchical_over_atomic": {
+          "geometric_mean": 1.187134401068811,
+          "max": 1.3313147286062381,
+          "min": 1.00181138270585
+        },
+        "hierarchical_over_row": {
+          "geometric_mean": 1.9906155435914137,
+          "max": 1.9917518230195719,
+          "min": 1.9888544764880518
+        },
+        "row_over_atomic": {
+          "geometric_mean": 0.5963654834760387,
+          "max": 0.6690487468837756,
+          "min": 0.5029800254868428
+        }
+      },
+      "seed_count": 5,
+      "seeds": [
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 8.210240006446838,
+            "hierarchical_stable": 8.226560056209564,
+            "row_stable": 4.132480025291443
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.0019877676840032,
+            "hierarchical_over_row": 1.9907077604396615,
+            "row_over_atomic": 0.5033324265851595
+          },
+          "tensor_seed": 660200
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.179519891738892,
+            "hierarchical_stable": 8.22272002696991,
+            "row_stable": 4.13440003991127
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3306405952285185,
+            "hierarchical_over_row": 1.9888544764880518,
+            "row_over_atomic": 0.6690487468837756
+          },
+          "tensor_seed": 660201
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.1823999881744385,
+            "hierarchical_stable": 8.230720162391663,
+            "row_stable": 4.132959991693497
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3313147286062381,
+            "hierarchical_over_row": 1.9914831449938843,
+            "row_over_atomic": 0.6685041407218771
+          },
+          "tensor_seed": 660202
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 8.214719891548157,
+            "hierarchical_stable": 8.22959989309311,
+            "row_stable": 4.131840020418167
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.00181138270585,
+            "hierarchical_over_row": 1.9917518230195719,
+            "row_over_atomic": 0.5029800254868428
+          },
+          "tensor_seed": 660203
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.203199923038483,
+            "hierarchical_stable": 8.224799931049347,
+            "row_stable": 4.132480025291443
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3258963169158402,
+            "hierarchical_over_row": 1.9902818357771235,
+            "row_over_atomic": 0.66618520708055
+          },
+          "tensor_seed": 660204
+        }
+      ]
+    },
+    {
+      "cell": {
+        "batch": 8,
+        "block_size": 64,
+        "cell_id": "T3",
+        "compact": true,
+        "dcp_rank": 3,
+        "dcp_size": 4,
+        "interleave": 4,
+        "ownership_profile": "expected",
+        "seed": 660003,
+        "table_profile": "fragmented",
+        "width": 4096
+      },
+      "gate_pass": true,
+      "paired_ratio_summary": {
+        "hierarchical_over_atomic": {
+          "geometric_mean": 1.3299421083655223,
+          "max": 1.3312802668989578,
+          "min": 1.3291414418404395
+        },
+        "hierarchical_over_row": {
+          "geometric_mean": 1.3305685544339048,
+          "max": 1.331555946323343,
+          "min": 1.329106089400605
+        },
+        "row_over_atomic": {
+          "geometric_mean": 0.9995291891828535,
+          "max": 1.000155300788119,
+          "min": 0.9990176582195065
+        }
+      },
+      "seed_count": 5,
+      "seeds": [
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.188959777355194,
+            "hierarchical_stable": 8.22735995054245,
+            "row_stable": 6.182880103588104
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3293607078600778,
+            "hierarchical_over_row": 1.3306678785131019,
+            "row_over_atomic": 0.9990176582195065
+          },
+          "tensor_seed": 660300
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.183359920978546,
+            "hierarchical_stable": 8.218559920787811,
+            "row_stable": 6.178080141544342
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3291414418404395,
+            "hierarchical_over_row": 1.330277324426777,
+            "row_over_atomic": 0.9991461309867647
+          },
+          "tensor_seed": 660301
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.18256002664566,
+            "hierarchical_stable": 8.230720162391663,
+            "row_stable": 6.181280016899109
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3312802668989578,
+            "hierarchical_over_row": 1.331555946323343,
+            "row_over_atomic": 0.9997929644449816
+          },
+          "tensor_seed": 660302
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.18479996919632,
+            "hierarchical_stable": 8.22959989309311,
+            "row_stable": 6.181919872760773
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.330616985849342,
+            "hierarchical_over_row": 1.3312369073813095,
+            "row_over_atomic": 0.9995343266637738
+          },
+          "tensor_seed": 660303
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.181119978427887,
+            "hierarchical_stable": 8.216640055179596,
+            "row_stable": 6.182079911231995
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3293125006237827,
+            "hierarchical_over_row": 1.329106089400605,
+            "row_over_atomic": 1.000155300788119
+          },
+          "tensor_seed": 660304
+        }
+      ]
+    },
+    {
+      "cell": {
+        "batch": 32,
+        "block_size": 128,
+        "cell_id": "T4",
+        "compact": true,
+        "dcp_rank": 7,
+        "dcp_size": 8,
+        "interleave": 2,
+        "ownership_profile": "expected",
+        "seed": 660004,
+        "table_profile": "fragmented",
+        "width": 1024
+      },
+      "gate_pass": true,
+      "paired_ratio_summary": {
+        "hierarchical_over_atomic": {
+          "geometric_mean": 1.330160166923056,
+          "max": 1.3313224925301776,
+          "min": 1.3282102760525976
+        },
+        "hierarchical_over_row": {
+          "geometric_mean": 2.0248391030347177,
+          "max": 2.0510969564771444,
+          "min": 1.997008900003965
+        },
+        "row_over_atomic": {
+          "geometric_mean": 0.6569214141160573,
+          "max": 0.6663129561184701,
+          "min": 0.6490782838548923
+        }
+      },
+      "seed_count": 5,
+      "seeds": [
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.1798399686813354,
+            "hierarchical_stable": 8.22735995054245,
+            "row_stable": 4.011199921369553
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3313224925301776,
+            "hierarchical_over_row": 2.0510969564771444,
+            "row_over_atomic": 0.6490782838548923
+          },
+          "tensor_seed": 660400
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.183840036392212,
+            "hierarchical_stable": 8.213439881801605,
+            "row_stable": 4.046240001916885
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3282102760525976,
+            "hierarchical_over_row": 2.0298943903254703,
+            "row_over_atomic": 0.6543248172825555
+          },
+          "tensor_seed": 660401
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.181599795818329,
+            "hierarchical_stable": 8.225440084934235,
+            "row_stable": 4.118880033493042
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3306329035565363,
+            "hierarchical_over_row": 1.997008900003965,
+            "row_over_atomic": 0.6663129561184701
+          },
+          "tensor_seed": 660402
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.18479996919632,
+            "hierarchical_stable": 8.225600123405457,
+            "row_stable": 4.116960018873215
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3299702762212902,
+            "hierarchical_over_row": 1.997979112184031,
+            "row_over_atomic": 0.6656577479268405
+          },
+          "tensor_seed": 660403
+        },
+        {
+          "gate_pass": true,
+          "median_us": {
+            "atomic": 6.180960237979889,
+            "hierarchical_stable": 8.224799931049347,
+            "row_stable": 4.0142399072647095
+          },
+          "ratios": {
+            "hierarchical_over_atomic": 1.3306670184530167,
+            "hierarchical_over_row": 2.048905925170202,
+            "row_over_atomic": 0.6494524722224513
+          },
+          "tensor_seed": 660404
+        }
+      ]
+    }
+  ]
+}

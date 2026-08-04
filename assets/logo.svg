@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img"
+     aria-label="SILKern: three scattered index threads weave once and exit as parallel, evenly ordered strands plugged into a prefix rail. Threads are per-rank index streams; the crossing is the converter; the flat braid is the stable compacted physical prefix.">
+  <style>
+    .ink    { stroke: #0b0b0b; }
+    .rail   { fill: #0b0b0b; }
+    .blue   { stroke: url(#gBlue); }
+    .orange { stroke: url(#gOrange); }
+    .thread { fill: none; stroke-width: 5.5; stroke-linecap: round; }
+    .draw   { stroke-dasharray: 100; stroke-dashoffset: 0; animation: weave 1.6s cubic-bezier(.6,0,.2,1) both; }
+    @keyframes weave { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .draw { animation: none; } }
+    @media (prefers-color-scheme: dark) {
+      .ink  { stroke: #f2f2f0; }
+      .rail { fill: #f2f2f0; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a78d6"/><stop offset="1" stop-color="#4a9be6"/>
+    </linearGradient>
+    <linearGradient id="gOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eb6834"/><stop offset="1" stop-color="#f2914f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Scattered on the left (y = 48, 70, 26), ordered on the right (y = 66, 30, 48):
+       same set, same count, one fixed order. Layering at the crossings is the weave. -->
+  <path class="thread ink draw"    pathLength="100" d="M 6 48 C 30 48, 40 66, 62 66 L 82 66"/>
+  <path class="thread blue draw"   pathLength="100" style="animation-delay:.12s" d="M 6 70 C 30 70, 40 30, 62 30 L 82 30"/>
+  <path class="thread orange draw" pathLength="100" style="animation-delay:.24s" d="M 6 26 C 30 26, 40 48, 62 48 L 82 48"/>
+
+  <!-- The prefix rail: the rank-owned buffer the ordered strands plug into. -->
+  <rect class="rail" x="84" y="21" width="5.5" height="54" rx="2.75"/>
+</svg>

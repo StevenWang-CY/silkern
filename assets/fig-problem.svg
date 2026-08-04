@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 448" width="900" height="448" role="img"
+     aria-label="Three replays of identical input. The atomic converter returns a different order each time; SILKern returns the same order each time. Both return the same set and the same count.">
+  <style>
+    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .h1   { fill: #0b0b0b; font-size: 19px; font-weight: 650; }
+    .h2   { fill: #0b0b0b; font-size: 15px; font-weight: 620; }
+    .body { fill: #52514e; font-size: 13px; }
+    .mute { fill: #86857f; font-size: 12px; }
+    .cell { fill: #0b0b0b; font-size: 12.5px; }
+    .rule { stroke: #dcdbd5; stroke-width: 1; }
+    .card { fill: none; stroke: #dcdbd5; stroke-width: 1; }
+
+    .bad  { fill: #eb6834; }
+    .good { fill: #2a78d6; }
+    .badbox  { fill: #eb6834; fill-opacity: 0.13; stroke: #eb6834; stroke-width: 1.25; }
+    .goodbox { fill: #2a78d6; fill-opacity: 0.13; stroke: #2a78d6; stroke-width: 1.25; }
+
+    @media (prefers-color-scheme: dark) {
+      .h1, .h2, .cell { fill: #ffffff; }
+      .body { fill: #c3c2b7; }
+      .mute { fill: #91908a; }
+      .rule, .card { stroke: #3a3a37; }
+      .bad  { fill: #d95926; }
+      .good { fill: #3987e5; }
+      .badbox  { fill: #d95926; fill-opacity: 0.22; stroke: #d95926; }
+      .goodbox { fill: #3987e5; fill-opacity: 0.22; stroke: #3987e5; }
+    }
+  </style>
+
+  <text class="h1" x="24" y="28">One selection row. Three replays. Byte-identical input.</text>
+  <text class="body" x="24" y="50">Rank-local physical KV slots, in the order the attention kernel will consume them.</text>
+
+  <line class="rule" x1="24" y1="66" x2="876" y2="66"/>
+
+  <!-- ================= LEFT: atomic ================= -->
+  <rect class="card" x="24" y="82" width="416" height="252" rx="8"/>
+  <circle class="bad" cx="44" cy="108" r="5"/>
+  <text class="h2" x="58" y="113">atomic reservation</text>
+  <text class="mute" x="58" y="131">one atomic_add per tile, after a tile-local scan</text>
+
+  <text class="mute" x="40" y="169">run 1</text>
+  <g class="badbox"><rect x="86" y="153" width="40" height="24" rx="4"/><rect x="130" y="153" width="40" height="24" rx="4"/><rect x="174" y="153" width="40" height="24" rx="4"/><rect x="218" y="153" width="40" height="24" rx="4"/><rect x="262" y="153" width="40" height="24" rx="4"/><rect x="306" y="153" width="40" height="24" rx="4"/><rect x="350" y="153" width="40" height="24" rx="4"/><rect x="394" y="153" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="106" y="170">132</text><text x="150" y="170">133</text><text x="194" y="170">704</text><text x="238" y="170">705</text><text x="282" y="170">897</text><text x="326" y="170">260</text><text x="370" y="170">448</text><text x="414" y="170">896</text></g>
+
+  <text class="mute" x="40" y="205">run 2</text>
+  <g class="badbox"><rect x="86" y="189" width="40" height="24" rx="4"/><rect x="130" y="189" width="40" height="24" rx="4"/><rect x="174" y="189" width="40" height="24" rx="4"/><rect x="218" y="189" width="40" height="24" rx="4"/><rect x="262" y="189" width="40" height="24" rx="4"/><rect x="306" y="189" width="40" height="24" rx="4"/><rect x="350" y="189" width="40" height="24" rx="4"/><rect x="394" y="189" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="106" y="206">704</text><text x="150" y="206">705</text><text x="194" y="206">448</text><text x="238" y="206">896</text><text x="282" y="206">132</text><text x="326" y="206">133</text><text x="370" y="206">897</text><text x="414" y="206">260</text></g>
+
+  <text class="mute" x="40" y="241">run 3</text>
+  <g class="badbox"><rect x="86" y="225" width="40" height="24" rx="4"/><rect x="130" y="225" width="40" height="24" rx="4"/><rect x="174" y="225" width="40" height="24" rx="4"/><rect x="218" y="225" width="40" height="24" rx="4"/><rect x="262" y="225" width="40" height="24" rx="4"/><rect x="306" y="225" width="40" height="24" rx="4"/><rect x="350" y="225" width="40" height="24" rx="4"/><rect x="394" y="225" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="106" y="242">448</text><text x="150" y="242">896</text><text x="194" y="242">897</text><text x="238" y="242">260</text><text x="282" y="242">704</text><text x="326" y="242">705</text><text x="370" y="242">132</text><text x="414" y="242">133</text></g>
+
+  <line class="rule" x1="40" y1="266" x2="424" y2="266"/>
+  <text class="h2" x="40" y="290">3 distinct orders in 3 runs</text>
+  <text class="body" x="40" y="311">Measured on two H100s: <tspan class="mono">17–20</tspan> distinct orders per 20 replays</text>
+
+  <!-- ================= RIGHT: SILKern ================= -->
+  <rect class="card" x="460" y="82" width="416" height="252" rx="8"/>
+  <circle class="good" cx="480" cy="108" r="5"/>
+  <text class="h2" x="494" y="113">silkern</text>
+  <text class="mute" x="494" y="131">row-wide scan or deterministic tile prefix — no atomics</text>
+
+  <text class="mute" x="476" y="169">run 1</text>
+  <g class="goodbox"><rect x="522" y="153" width="40" height="24" rx="4"/><rect x="566" y="153" width="40" height="24" rx="4"/><rect x="610" y="153" width="40" height="24" rx="4"/><rect x="654" y="153" width="40" height="24" rx="4"/><rect x="698" y="153" width="40" height="24" rx="4"/><rect x="742" y="153" width="40" height="24" rx="4"/><rect x="786" y="153" width="40" height="24" rx="4"/><rect x="830" y="153" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="542" y="170">704</text><text x="586" y="170">705</text><text x="630" y="170">132</text><text x="674" y="170">133</text><text x="718" y="170">448</text><text x="762" y="170">896</text><text x="806" y="170">897</text><text x="850" y="170">260</text></g>
+
+  <text class="mute" x="476" y="205">run 2</text>
+  <g class="goodbox"><rect x="522" y="189" width="40" height="24" rx="4"/><rect x="566" y="189" width="40" height="24" rx="4"/><rect x="610" y="189" width="40" height="24" rx="4"/><rect x="654" y="189" width="40" height="24" rx="4"/><rect x="698" y="189" width="40" height="24" rx="4"/><rect x="742" y="189" width="40" height="24" rx="4"/><rect x="786" y="189" width="40" height="24" rx="4"/><rect x="830" y="189" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="542" y="206">704</text><text x="586" y="206">705</text><text x="630" y="206">132</text><text x="674" y="206">133</text><text x="718" y="206">448</text><text x="762" y="206">896</text><text x="806" y="206">897</text><text x="850" y="206">260</text></g>
+
+  <text class="mute" x="476" y="241">run 3</text>
+  <g class="goodbox"><rect x="522" y="225" width="40" height="24" rx="4"/><rect x="566" y="225" width="40" height="24" rx="4"/><rect x="610" y="225" width="40" height="24" rx="4"/><rect x="654" y="225" width="40" height="24" rx="4"/><rect x="698" y="225" width="40" height="24" rx="4"/><rect x="742" y="225" width="40" height="24" rx="4"/><rect x="786" y="225" width="40" height="24" rx="4"/><rect x="830" y="225" width="40" height="24" rx="4"/></g>
+  <g class="cell mono" text-anchor="middle"><text x="542" y="242">704</text><text x="586" y="242">705</text><text x="630" y="242">132</text><text x="674" y="242">133</text><text x="718" y="242">448</text><text x="762" y="242">896</text><text x="806" y="242">897</text><text x="850" y="242">260</text></g>
+
+  <line class="rule" x1="476" y1="266" x2="860" y2="266"/>
+  <text class="h2" x="476" y="290">1 order, always — and it is the selector's</text>
+  <text class="body" x="476" y="311">Free-running generations were bitwise identical across sessions</text>
+
+  <!-- ================= caption ================= -->
+  <line class="rule" x1="24" y1="360" x2="876" y2="360"/>
+  <text class="h2" x="24" y="386">Same set. Same count. Different order.</text>
+  <text class="body" x="24" y="408">Nothing was violated. The converter promises a set and a count &#8212; not an order.</text>
+  <text class="body" x="24" y="428">But floating-point reduction is not associative, so a different order is a different logit, and eventually a different token.</text>
+</svg>

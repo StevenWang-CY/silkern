@@ -1,0 +1,71 @@
+{
+  "all_session_gates_pass": true,
+  "claim_boundary": "reference-executor complete-decode ratios under live DCP-2; Tier-1 supports the no-measurable-cost headline only; Tier-2 alone supports speedup wording; neither is a serving-runtime, capacity, or quality-benchmark result",
+  "classification": "pass_tier1_non_inferiority",
+  "contrasts": {
+    "hierarchical_stable_over_atomic.c32768": {
+      "confidence": 0.9875,
+      "hi": 1.0033682942983606,
+      "lo": 0.9978001025879459,
+      "log_half_width": 0.002782477521159125,
+      "log_mean": 0.0005801567800908429,
+      "point": 1.0005803251035854,
+      "sessions": 5
+    },
+    "hierarchical_stable_over_atomic.c65536": {
+      "confidence": 0.9875,
+      "hi": 1.0086475208710375,
+      "lo": 0.9957498128886884,
+      "log_half_width": 0.006434795028565595,
+      "log_mean": 0.00217555019823563,
+      "point": 1.0021779184246553,
+      "sessions": 5
+    },
+    "row_stable_over_atomic.c32768": {
+      "confidence": 0.9875,
+      "hi": 1.002696221505502,
+      "lo": 0.9973732493136644,
+      "log_half_width": 0.002661399934911697,
+      "log_mean": 3.1193285696828836e-05,
+      "point": 1.0000311937722124,
+      "sessions": 5
+    },
+    "row_stable_over_atomic.c65536": {
+      "confidence": 0.9875,
+      "hi": 1.0176999569771914,
+      "lo": 1.0103255583410615,
+      "log_half_width": 0.00363626151782157,
+      "log_mean": 0.013908875423377192,
+      "point": 1.0140060538560187,
+      "sessions": 5
+    }
+  },
+  "descriptive_tpot": {
+    "hierarchical_stable": {
+      "median_seconds": 0.49051974499980133,
+      "observations": 320,
+      "p95_seconds": 0.5069410020005307
+    },
+    "pinned_atomic": {
+      "median_seconds": 0.48666577149924706,
+      "observations": 320,
+      "p95_seconds": 0.5008765229995333
+    },
+    "row_stable": {
+      "median_seconds": 0.4851370810001754,
+      "observations": 320,
+      "p95_seconds": 0.5059157030009374
+    }
+  },
+  "experiment": "E79",
+  "precision_log_half_width_target": 0.006,
+  "precision_met": true,
+  "primary_contrast": "row_stable_over_atomic.c32768",
+  "schema": "regatta.e79.canary.analysis.v1",
+  "sessions": 5,
+  "stop_now": true,
+  "tier1_margin": 1.01,
+  "tier1_pass": true,
+  "tier2_margin": 0.99,
+  "tier2_pass": false
+}

@@ -1,0 +1,49 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: python -m ruff check .
+      - name: Test (no GPU)
+        run: python -m pytest -q -W error -m "not gpu"
+      # The contract and the oracle must work with no GPU stack installed at all.
+      # This is the check that catches an accidental top-level torch/triton import.
+      - name: Import without torch or triton
+        run: |
+          python - <<'EOF'
+          import silkern
+          out, counts = silkern.localize_reference(
+              [0], [[3, 1]], [[0, 1, 2, 3]],
+              block_size=2, dcp_size=2, dcp_rank=0,
+          )
+          assert counts == [2], counts
+          report = silkern.conformance()
+          assert report.skipped is not None, "expected a skip with no device"
+          assert not report.ok
+          print(report.summary())
+          EOF
+
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify evidence checksums
+        working-directory: evidence
+        run: shasum -a 256 -c SHA256SUMS

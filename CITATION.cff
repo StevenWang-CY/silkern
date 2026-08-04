@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >-
+  If you use SILKern in academic work, please cite it. Author metadata is
+  withheld pending peer review of the accompanying manuscript and will be
+  filled in on de-anonymization; until then, cite the software release.
+title: "SILKern: deterministic sparse-index localization for context-parallel decode"
+abstract: >-
+  Token-sparse decode selects global logical token positions while
+  context-parallel attention consumes rank-owned physical KV-cache slots.
+  Production converters between the two reserve output segments with atomic
+  additions: they preserve the selected set and its cardinality but leave the
+  order of the consumed prefix unspecified, so it varies across runs of
+  identical input. SILKern provides an exact localization contract, an
+  independent CPU oracle, and two allocation-free Triton implementations
+  (row-wide and hierarchical) that additionally preserve the selector's global
+  order and hold fixed addresses across CUDA-graph replay.
+type: software
+version: "0.1.0"
+license: Apache-2.0
+authors:
+  - name: "The SILKern Authors"
+keywords:
+  - sparse attention
+  - context parallelism
+  - index localization
+  - determinism
+  - CUDA graphs
+  - LLM inference

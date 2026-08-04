@@ -1,0 +1,300 @@
+{
+  "causal_wording_requires_counter_agreement": true,
+  "claim_boundary": "E80 decomposes the E76 selection-to-projection boundary on one RTX 5060 Ti stack under the shared token-slot contract. It supports at most a mechanism classification with disclosed counter evidence. It supplies no full-layer, full-decode, live-rank, quality, capacity, serving, portability, or Keye-native-baseline claim, and it can neither promote the E76 abstention nor unlock any budget tranche.",
+  "classification": "mixed",
+  "confidence_level": 0.9958333333333333,
+  "contrasts": {
+    "T1_converter_work": {
+      "16384": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.1397097402951495,
+        "lower_us": 1.8454602441051229,
+        "mean_us": 1.9851699844002724,
+        "n": 8,
+        "session_medians_us": [
+          2.0455199480056763,
+          1.8175998330116272,
+          2.0581600069999695,
+          2.049039900302887,
+          2.0505598187446594,
+          1.8862402439117432,
+          1.9257602095603943,
+          2.048479914665222
+        ],
+        "status": "evaluated",
+        "upper_us": 2.124879724695422
+      },
+      "32768": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.007188272221417908,
+        "lower_us": 2.041141736762194,
+        "mean_us": 2.048330008983612,
+        "n": 8,
+        "session_medians_us": [
+          2.0504000782966614,
+          2.0480000972747803,
+          2.051199972629547,
+          2.0581600069999695,
+          2.0453599095344543,
+          2.0450398325920105,
+          2.045600116252899,
+          2.042880058288574
+        ],
+        "status": "evaluated",
+        "upper_us": 2.05551828120503
+      },
+      "4096": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.006811678970229562,
+        "lower_us": 2.0438384780641674,
+        "mean_us": 2.050650157034397,
+        "n": 8,
+        "session_medians_us": [
+          2.054640054702759,
+          2.0500802993774414,
+          2.056799829006195,
+          2.0552000403404236,
+          2.0444002747535706,
+          2.0500802993774414,
+          2.049040198326111,
+          2.0449602603912354
+        ],
+        "status": "evaluated",
+        "upper_us": 2.057461836004627
+      },
+      "8192": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.4650335452615992,
+        "lower_us": 1.4716565542757734,
+        "mean_us": 1.9366900995373726,
+        "n": 8,
+        "session_medians_us": [
+          2.045920193195343,
+          2.051039934158325,
+          2.0477601885795593,
+          2.0475998520851135,
+          2.046320140361786,
+          2.051039934158325,
+          1.156880259513855,
+          2.0469602942466736
+        ],
+        "status": "evaluated",
+        "upper_us": 2.4017236447989716
+      }
+    },
+    "T2_prefix_order": {
+      "16384": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.48970619875506416,
+        "lower_us": -1.2747172518403913,
+        "mean_us": -0.7850110530853271,
+        "n": 8,
+        "session_medians_us": [
+          -0.8447885513305664,
+          -0.6144523620605469,
+          -0.7248401641845703,
+          -0.5631923675537109,
+          -0.35839080810546875,
+          -1.485610008239746,
+          -0.7928371429443359,
+          -0.8959770202636719
+        ],
+        "status": "evaluated",
+        "upper_us": -0.295304854330263
+      },
+      "32768": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.6300490855242583,
+        "lower_us": 1.5749413014386322,
+        "mean_us": 2.2049903869628906,
+        "n": 8,
+        "session_medians_us": [
+          2.0632028579711914,
+          2.12557315826416,
+          2.3303985595703125,
+          2.60159969329834,
+          1.5727758407592773,
+          1.6623735427856445,
+          2.6527881622314453,
+          2.631211280822754
+        ],
+        "status": "evaluated",
+        "upper_us": 2.835039472487149
+      },
+      "4096": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.5608946479513183,
+        "lower_us": -1.6369849837972654,
+        "mean_us": -1.0760903358459473,
+        "n": 8,
+        "session_medians_us": [
+          -1.100015640258789,
+          -1.1159896850585938,
+          -1.1151790618896484,
+          -0.4712104797363281,
+          -1.2543678283691406,
+          -1.7960071563720703,
+          -0.9583950042724609,
+          -0.7975578308105469
+        ],
+        "status": "evaluated",
+        "upper_us": -0.515195687894629
+      },
+      "8192": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.705295029961115,
+        "lower_us": -1.6145996487965641,
+        "mean_us": -0.9093046188354492,
+        "n": 8,
+        "session_medians_us": [
+          -0.8960247039794922,
+          -1.2000083923339844,
+          -0.25043487548828125,
+          -1.2616157531738281,
+          -0.6455898284912109,
+          -1.6895771026611328,
+          -0.9471893310546875,
+          -0.38399696350097656
+        ],
+        "status": "evaluated",
+        "upper_us": -0.20400958887433418
+      }
+    },
+    "T3_converter_context": {
+      "16384": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.5465663857260881,
+        "lower_us": 2.3593209796150987,
+        "mean_us": 2.9058873653411865,
+        "n": 8,
+        "session_medians_us": [
+          2.7383804321289062,
+          2.5680065155029297,
+          2.6231765747070312,
+          3.4887313842773438,
+          2.585601806640625,
+          3.287220001220703,
+          3.2423973083496094,
+          2.7135848999023438
+        ],
+        "status": "evaluated",
+        "upper_us": 3.4524537510672744
+      },
+      "32768": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.7997507466116903,
+        "lower_us": 2.7158504115303996,
+        "mean_us": 3.51560115814209,
+        "n": 8,
+        "session_medians_us": [
+          4.632806777954102,
+          3.168821334838867,
+          3.916025161743164,
+          3.4304141998291016,
+          3.123950958251953,
+          3.5071849822998047,
+          3.428792953491211,
+          2.9168128967285156
+        ],
+        "status": "evaluated",
+        "upper_us": 4.31535190475378
+      },
+      "4096": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.9052610425958192,
+        "lower_us": 2.868750092505499,
+        "mean_us": 3.7740111351013184,
+        "n": 8,
+        "session_medians_us": [
+          5.111169815063477,
+          3.764009475708008,
+          3.1728267669677734,
+          3.9520263671875,
+          3.5320281982421875,
+          3.6936283111572266,
+          3.152799606323242,
+          3.813600540161133
+        ],
+        "status": "evaluated",
+        "upper_us": 4.679272177697138
+      },
+      "8192": {
+        "excluded_degenerate_sessions": 0,
+        "excludes_zero": true,
+        "half_width_us": 0.7693955703990379,
+        "lower_us": 5.506615896580943,
+        "mean_us": 6.2760114669799805,
+        "n": 8,
+        "session_medians_us": [
+          6.322431564331055,
+          5.811214447021484,
+          6.895208358764648,
+          6.881618499755859,
+          5.431985855102539,
+          5.908775329589844,
+          6.428813934326172,
+          6.528043746948242
+        ],
+        "status": "evaluated",
+        "upper_us": 7.045407037379018
+      }
+    }
+  },
+  "dose_response_descriptive_us": {
+    "16384": {
+      "down_atomic_order": 800.3487825393677,
+      "down_position_sorted": 800.1955986022949,
+      "down_reversed": 801.2836217880249,
+      "down_selector_order": 801.0555982589722
+    },
+    "32768": {
+      "down_atomic_order": 801.4991998672485,
+      "down_position_sorted": 799.9699950218201,
+      "down_reversed": 802.8824090957642,
+      "down_selector_order": 799.4207978248596
+    },
+    "4096": {
+      "down_atomic_order": 803.79478931427,
+      "down_position_sorted": 802.678394317627,
+      "down_reversed": 803.8351774215698,
+      "down_selector_order": 804.8207998275757
+    },
+    "8192": {
+      "down_atomic_order": 801.5647888183594,
+      "down_position_sorted": 799.865996837616,
+      "down_reversed": 800.3924131393433,
+      "down_selector_order": 802.5883913040161
+    }
+  },
+  "experiment": "E80",
+  "protocol_sha256": "a0d1a0fa5fb67adf93e901c65a7b6b071eb2f407c8f4d5d8f346be6a7581aa4f",
+  "resolved_components": [
+    "T1_converter_work",
+    "T3_converter_context"
+  ],
+  "schema": "regatta.e80.analysis.v1",
+  "session_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "sessions": 8,
+  "source_commit": "bff5bef53f189ce42a307c23bcb83d6ba62cefb5",
+  "stop_state": "precision_reached"
+}

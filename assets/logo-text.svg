@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" role="img"
+     aria-label="SILKern wordmark. Every letter is drawn monoline, woven from the same threads as the mark. The K is special: its stem is a stack of paged-KV tile blocks and its diagonals are the two kernel threads, blue woven under the stem and orange over it. Each letter sits on its own slot tick - kerned exactly, nothing out of order.">
+  <style>
+    .ink    { fill: #0b0b0b; }
+    .sub    { fill: #0b0b0b; fill-opacity: .58; }
+    .tick   { fill: #0b0b0b; fill-opacity: .28; }
+    .inkS   { stroke: #0b0b0b; }
+    .softS  { stroke: #454542; }
+    .blue   { stroke: url(#gBlue); }
+    .orange { stroke: url(#gOrange); }
+    .thread { fill: none; stroke-width: 5.5; stroke-linecap: round; }
+    .glyph  { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+    .draw   { stroke-dasharray: 100; stroke-dashoffset: 0; animation: weave 1.6s cubic-bezier(.6,0,.2,1) both; }
+    @keyframes weave { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .draw { animation: none; } }
+    .cap { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+           font-weight: 600; font-size: 11.5px; letter-spacing: 2.2px; }
+    @media (prefers-color-scheme: dark) {
+      .ink   { fill: #f2f2f0; }
+      .sub   { fill: #f2f2f0; }
+      .tick  { fill: #f2f2f0; }
+      .inkS  { stroke: #f2f2f0; }
+      .softS { stroke: #c4c4c1; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a78d6"/><stop offset="1" stop-color="#4a9be6"/>
+    </linearGradient>
+    <linearGradient id="gOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eb6834"/><stop offset="1" stop-color="#f2914f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The mark: scattered threads weave once, exit ordered, plug into the prefix rail. -->
+  <g transform="translate(6,26)">
+    <path class="thread inkS draw"   pathLength="100" d="M 6 48 C 30 48, 40 66, 62 66 L 82 66"/>
+    <path class="thread blue draw"   pathLength="100" style="animation-delay:.12s" d="M 6 70 C 30 70, 40 30, 62 30 L 82 30"/>
+    <path class="thread orange draw" pathLength="100" style="animation-delay:.24s" d="M 6 26 C 30 26, 40 48, 62 48 L 82 48"/>
+    <rect class="ink" x="84" y="21" width="5.5" height="54" rx="2.75"/>
+  </g>
+
+  <!-- Wordmark: monoline glyphs woven from the same thread system, baseline y=95. -->
+  <g transform="translate(0,55)">
+    <!-- S -->
+    <path class="glyph inkS" transform="translate(140,0)"
+          d="M 21.5 7.5 C 19 3.2, 6.5 2.2, 4.5 9 C 2.6 15.8, 20.5 17.2, 21.6 25.8 C 22.6 33.8, 8 38.6, 3.2 32.4"/>
+    <!-- I -->
+    <path class="glyph inkS" transform="translate(176,0)" d="M 3.5 3.5 V 36.5"/>
+    <!-- L -->
+    <path class="glyph inkS" transform="translate(195,0)" d="M 3.5 3.5 V 36.5 H 19.5"/>
+    <!-- K: stem = paged-KV tiles (the ordered prefix); diagonals = the two kernels
+         as threads, blue tucked under the stem, orange emerging over it. -->
+    <g transform="translate(227,0)">
+      <path class="glyph blue draw" pathLength="100" style="animation-delay:.36s" d="M 31 1.5 C 24 9, 18 16, 5.5 24"/>
+      <rect class="ink" x="0" y="0"     width="9" height="8" rx="2.2"/>
+      <rect class="ink" x="0" y="10.67" width="9" height="8" rx="2.2"/>
+      <rect class="ink" x="0" y="21.33" width="9" height="8" rx="2.2"/>
+      <rect class="ink" x="0" y="32"    width="9" height="8" rx="2.2"/>
+      <path class="glyph orange draw" pathLength="100" style="animation-delay:.48s" d="M 5.5 23.5 C 14 29, 25 34.5, 31.5 38.5"/>
+    </g>
+    <!-- e -->
+    <path class="glyph softS" transform="translate(273,0)"
+          d="M 3.6 25 H 20.4 C 20.4 13.6, 3.6 13.6, 3.6 25.4 C 3.6 34.2, 12.4 38.4, 20 33"/>
+    <!-- r -->
+    <g transform="translate(309,0)">
+      <path class="glyph softS" d="M 3.5 15.5 V 36.5"/>
+      <path class="glyph softS" d="M 3.5 23 C 4.6 16.6, 11.5 14, 16.5 16"/>
+    </g>
+    <!-- n -->
+    <g transform="translate(334,0)">
+      <path class="glyph softS" d="M 3.5 15.5 V 36.5"/>
+      <path class="glyph softS" d="M 3.5 21.5 C 5.5 15, 18.5 13.6, 18.5 23.5 V 36.5"/>
+    </g>
+  </g>
+
+  <!-- Slot ticks: one per glyph, exactly placed. Kern is a typographer's word too. -->
+  <rect class="tick" x="147.5" y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="174.5" y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="201.5" y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="238.5" y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="280"   y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="307.5" y="103" width="10" height="2.5" rx="1.25"/>
+  <rect class="tick" x="340"   y="103" width="10" height="2.5" rx="1.25"/>
+
+  <text class="cap sub" x="248" y="130" text-anchor="middle">SPARSE-INDEX LOCALIZATION KERNELS</text>
+</svg>

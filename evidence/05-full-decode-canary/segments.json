@@ -1,0 +1,152 @@
+{
+  "schema": "silkern.evidence.e79.segments.v1",
+  "experiment": "E79",
+  "description": "Converter/attention/communication segment-graph medians from the five formal full-decode canary sessions (2x H100 80GB, live DCP-2). Each value is the median of per-block medians (32 replays per block, 4 blocks per session); pooled is the median across the five sessions. Units are microseconds per complete 48-layer step segment. Extracted mechanically from the frozen session records; no value was re-typed.",
+  "unit": "microseconds",
+  "contexts": {
+    "32768": {
+      "attention.hierarchical_stable": {
+        "per_session_median_us": [
+          16899.908,
+          17442.322,
+          16989.951,
+          17335.062,
+          16971.541
+        ],
+        "pooled_median_us": 16989.951
+      },
+      "attention.pinned_atomic": {
+        "per_session_median_us": [
+          17931.317,
+          17892.004,
+          18030.302,
+          18027.584,
+          17943.131
+        ],
+        "pooled_median_us": 17943.131
+      },
+      "attention.row_stable": {
+        "per_session_median_us": [
+          16318.188,
+          15745.478,
+          15560.472,
+          15772.497,
+          15843.083
+        ],
+        "pooled_median_us": 15772.497
+      },
+      "communication": {
+        "per_session_median_us": [
+          5117.964,
+          5259.582,
+          4869.251,
+          4604.122,
+          5217.09
+        ],
+        "pooled_median_us": 5117.964
+      },
+      "converter.hierarchical_stable": {
+        "per_session_median_us": [
+          239.409,
+          239.762,
+          239.978,
+          239.727,
+          239.638
+        ],
+        "pooled_median_us": 239.727
+      },
+      "converter.pinned_atomic": {
+        "per_session_median_us": [
+          194.384,
+          194.199,
+          195.047,
+          194.393,
+          194.516
+        ],
+        "pooled_median_us": 194.393
+      },
+      "converter.row_stable": {
+        "per_session_median_us": [
+          119.965,
+          119.162,
+          120.43,
+          119.996,
+          120.133
+        ],
+        "pooled_median_us": 119.996
+      }
+    },
+    "65536": {
+      "attention.hierarchical_stable": {
+        "per_session_median_us": [
+          18300.205,
+          18069.622,
+          17892.052,
+          17853.454,
+          17771.403
+        ],
+        "pooled_median_us": 17892.052
+      },
+      "attention.pinned_atomic": {
+        "per_session_median_us": [
+          17133.217,
+          17341.191,
+          17311.741,
+          17355.666,
+          17215.542
+        ],
+        "pooled_median_us": 17311.741
+      },
+      "attention.row_stable": {
+        "per_session_median_us": [
+          17370.357,
+          17640.532,
+          17350.842,
+          17367.743,
+          17195.457
+        ],
+        "pooled_median_us": 17367.743
+      },
+      "communication": {
+        "per_session_median_us": [
+          4982.745,
+          5167.52,
+          4897.207,
+          5124.583,
+          4900.436
+        ],
+        "pooled_median_us": 4982.745
+      },
+      "converter.hierarchical_stable": {
+        "per_session_median_us": [
+          239.717,
+          240.377,
+          240.041,
+          240.17,
+          240.303
+        ],
+        "pooled_median_us": 240.17
+      },
+      "converter.pinned_atomic": {
+        "per_session_median_us": [
+          194.325,
+          193.923,
+          194.858,
+          194.615,
+          194.423
+        ],
+        "pooled_median_us": 194.423
+      },
+      "converter.row_stable": {
+        "per_session_median_us": [
+          121.226,
+          121.757,
+          120.609,
+          121.634,
+          121.378
+        ],
+        "pooled_median_us": 121.378
+      }
+    }
+  }
+}

@@ -1,0 +1,1646 @@
+{
+  "cells": [
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "audit_document",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999999079,
+          "max_abs": 3.91155481338501e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999992,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "audit_document",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998697,
+          "max_abs": 6.705522537231445e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999992471019,
+          "max_abs": 3.0517578125e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "audit_document",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.99999999999985,
+          "max_abs": 4.470348358154297e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999984,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "audit_document",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998873,
+          "max_abs": 2.60770320892334e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999988,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999990843509,
+          "max_abs": 3.0517578125e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "audit_document",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998925,
+          "max_abs": 5.21540641784668e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999992,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999999923816,
+          "max_abs": 1.9073486328125e-06
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "audit_document",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999999163,
+          "max_abs": 3.725290298461914e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 0.9999999957616595,
+          "max_abs": 6.103515625e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "audit_document",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.999999999999892,
+          "max_abs": 5.960464477539063e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999993,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "audit_document",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998679,
+          "max_abs": 5.21540641784668e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "manuscript",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998506,
+          "max_abs": 3.3527612686157227e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 1.0000000000000002,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "manuscript",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998733,
+          "max_abs": 6.705522537231445e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999992,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0000000000000002,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "manuscript",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998985,
+          "max_abs": 3.725290298461914e-08
+        },
+        "lse": {
+          "cosine": 0.999999999999999,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "manuscript",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998963,
+          "max_abs": 2.0489096641540527e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999994,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999988635072,
+          "max_abs": 1.52587890625e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "manuscript",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998951,
+          "max_abs": 3.725290298461914e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999992,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 0.9999999889952725,
+          "max_abs": 6.103515625e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "manuscript",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998894,
+          "max_abs": 2.9802322387695312e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999998,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "manuscript",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998724,
+          "max_abs": 5.21540641784668e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "manuscript",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998893,
+          "max_abs": 2.60770320892334e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999993,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "implementation",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.999999999999887,
+          "max_abs": 5.21540641784668e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999988,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999994386223,
+          "max_abs": 1.52587890625e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 4096,
+        "corpus": "implementation",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.999999999999832,
+          "max_abs": 8.940696716308594e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999992,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999994386223,
+          "max_abs": 1.52587890625e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "implementation",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999997483,
+          "max_abs": 6.705522537231445e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999994,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 8192,
+        "corpus": "implementation",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998095,
+          "max_abs": 5.587935447692871e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999994,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "implementation",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998826,
+          "max_abs": 3.725290298461914e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999989,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999999976527,
+          "max_abs": 1.9073486328125e-06
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 16384,
+        "corpus": "implementation",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998943,
+          "max_abs": 3.725290298461914e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999996,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 1.0000000000000002,
+          "max_abs": 0.0
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "implementation",
+        "dcp_size": 2
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998953,
+          "max_abs": 4.470348358154297e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999991,
+          "max_abs": 1.9073486328125e-06
+        },
+        "projected": {
+          "cosine": 0.9999999999987296,
+          "max_abs": 9.5367431640625e-07
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    },
+    {
+      "cell": {
+        "context": 32768,
+        "corpus": "implementation",
+        "dcp_size": 4
+      },
+      "gate_pass": true,
+      "gates": {
+        "attention_cosine": true,
+        "attention_max_abs": true,
+        "collector_all_gates": true,
+        "collector_cell_gate": true,
+        "lse_max_abs": true,
+        "projected_cosine": true,
+        "projected_max_abs": true
+      },
+      "merge_record_exact": {
+        "lse": true,
+        "output": true
+      },
+      "metric_records_exact": {
+        "attention": true,
+        "lse": true,
+        "projected": true
+      },
+      "metrics": {
+        "attention": {
+          "cosine": 0.9999999999998985,
+          "max_abs": 4.470348358154297e-08
+        },
+        "lse": {
+          "cosine": 0.9999999999999997,
+          "max_abs": 9.5367431640625e-07
+        },
+        "projected": {
+          "cosine": 0.9999999992980658,
+          "max_abs": 3.0517578125e-05
+        }
+      },
+      "rank_checks": [
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        },
+        {
+          "collector_cpu_oracle": true,
+          "collector_stable_order": true,
+          "localized_full_array": true,
+          "reconstructed_global": true,
+          "valid_count": true
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "A pass supports trained-weight, real-token, layer-0 selector-to-attention semantic transfer for the exact Keye revision under single-GPU simulation of DCP-2/DCP-4. It does not establish all-48-layer execution, official FP8 selector-kernel equivalence, a rank-owned runtime, multi-GPU communication, model logits or quality, maximum context, latency, throughput, serving, capacity, or portability. It cannot unlock the second <cost redacted> tranche.",
+  "corpus_checks": {
+    "audit_document": {
+      "frozen_4k_digest": true,
+      "full_id_array": true,
+      "positive_repetitions": true,
+      "token_count": true,
+      "token_digest": true
+    },
+    "implementation": {
+      "full_id_array": true,
+      "positive_repetitions": true,
+      "token_count": true,
+      "token_digest": true
+    },
+    "manuscript": {
+      "full_id_array": true,
+      "positive_repetitions": true,
+      "token_count": true,
+      "token_digest": true
+    }
+  },
+  "decision": "pass_trained_layer0_semantic_transfer",
+  "exclusivity_checks": {
+    "collector_checks": true,
+    "collector_gate": true,
+    "one_process": true,
+    "same_device": true
+  },
+  "experiment": "E75-KEYE-LAYER0-TRAINED-SELECTOR",
+  "extraction_checks": {
+    "all_range_lengths": true,
+    "auxiliary_hashes": true,
+    "auxiliary_http": true,
+    "auxiliary_names": true,
+    "ceiling_byte_total": true,
+    "collector_gate": true,
+    "model_revision": true,
+    "no_full_checkpoint": true,
+    "no_redirect_urls": true,
+    "no_whole_shard": true,
+    "protocol_sha256": true,
+    "range_byte_total": true,
+    "runtime": true,
+    "schema": true,
+    "selected_tensor_bytes": true,
+    "selected_tensor_count": true,
+    "selected_tensor_names": true,
+    "shard_identity": true,
+    "source_header": true,
+    "subset_header": true
+  },
+  "extraction_manifest_sha256": "834352012b7781754ba6039199897b102d02fc640f13d12e2888d3d22b54e6f7",
+  "gate_pass": true,
+  "hadamard_checks": {
+    "collector_checks": true,
+    "collector_gate": true,
+    "cosine": true,
+    "finite": true,
+    "max_abs": true,
+    "shape": true,
+    "source_file_hashes": true,
+    "source_file_set": true,
+    "validation_mode": true
+  },
+  "hardware_checks": {
+    "capability": true,
+    "collector_checks": true,
+    "collector_gate": true,
+    "frozen_identity": true,
+    "one_device": true,
+    "preinit_apps_empty": true,
+    "product": true
+  },
+  "paper_admission": {
+    "all_48_layers": false,
+    "exact_localization_attention_conservation": true,
+    "full_model": false,
+    "multi_gpu": false,
+    "official_fp8_kernel_equivalence": false,
+    "performance": false,
+    "quality": false,
+    "real_token_selector_distribution": true,
+    "second_tranche_unlock": false,
+    "serving": false,
+    "trained_weight_layer0_semantics": true
+  },
+  "protocol_sha256": "3b47dc6e183ecfa6a744af0416fcf0c0fcb0020af6feefa8f1477308d012075a",
+  "raw_extraction_checks": {
+    "ceiling_bytes": true,
+    "collector_gate": true,
+    "no_full_checkpoint": true,
+    "preexisting_freeze": true,
+    "range_bytes": true,
+    "selected_bytes": true,
+    "subset": true
+  },
+  "raw_sha256": "9791103bb984e62760c8a2eb337cb15c921dc40fece081e8560bee04f0283b1c",
+  "runtime_checks": {
+    "collector_checks": true,
+    "collector_gate": true,
+    "expected": true,
+    "observed": true
+  },
+  "schema": "regatta.e75.analysis.v1",
+  "source_checks": {
+    "clean": true,
+    "collector_gate": true,
+    "commit": true,
+    "commit_policy": true,
+    "file_hashes": true,
+    "file_set": true,
+    "protocol": true
+  },
+  "source_freeze_sha256": "2a5813c7fff3f4130918de7289b29ce855f0e574c744919261f5f67095427642",
+  "top_level_checks": {
+    "all_24_cells": true,
+    "bounded_paper_admission": true,
+    "collector_global_gate": true,
+    "corpora": true,
+    "extraction": true,
+    "hadamard": true,
+    "hardware": true,
+    "one_formal_invocation": true,
+    "postrun_exclusivity": true,
+    "raw_extraction": true,
+    "runtime": true,
+    "source_freeze": true,
+    "zero_timing_observations": true
+  }
+}
