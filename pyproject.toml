@@ -36,10 +36,10 @@ gpu = ["torch>=2.4", "triton>=3.0"]
 dev = ["pytest>=8.0", "ruff>=0.6"]
 
 [project.urls]
-Homepage = "https://github.com/StevenWang-CY/silkern"
-Repository = "https://github.com/StevenWang-CY/silkern"
-Issues = "https://github.com/StevenWang-CY/silkern/issues"
-Evidence = "https://github.com/StevenWang-CY/silkern/tree/main/evidence"
+Homepage = "https://github.com/StevenWang-CY/SILKern"
+Repository = "https://github.com/StevenWang-CY/SILKern"
+Issues = "https://github.com/StevenWang-CY/SILKern/issues"
+Evidence = "https://github.com/StevenWang-CY/SILKern/tree/main/evidence"
 
 [project.scripts]
 silkern-verify = "silkern.verify:main"
