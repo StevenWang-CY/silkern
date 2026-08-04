@@ -1,119 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 490" width="900" height="490" role="img"
-     aria-label="Converter segment time: row-wide 120 microseconds, atomic baseline 194, hierarchical 239. Complete decode step ratios versus the atomic baseline: row-wide at 32K is 1.000031 with interval 0.997373 to 1.002696; hierarchical at 32K is 1.000580; hierarchical at 64K is 1.002178; row-wide at 64K is 1.014006 with interval 1.010326 to 1.017700, which exceeds the 1.01 margin.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 348" width="900" height="348" role="img"
+     aria-label="Panel a: converter segment time - row-wide 120.0 microseconds, atomic 194.4, hierarchical 239.7. Panel b: forest plot of complete decode step ratios versus the atomic baseline with 98.75 percent intervals; row-wide 32K 1.000031, hierarchical 32K 1.000580, hierarchical 64K 1.002178, all within the prespecified 1.01 margin; row-wide 64K 1.014006 exceeds it.">
   <style>
-    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    text  { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .h1   { fill: #0b0b0b; font-size: 19px; font-weight: 650; }
-    .h2   { fill: #0b0b0b; font-size: 15px; font-weight: 620; }
-    .val  { fill: #0b0b0b; font-size: 13px; font-weight: 620; }
-    .lab  { fill: #0b0b0b; font-size: 12.5px; }
-    .body { fill: #52514e; font-size: 12.5px; }
-    .mute { fill: #86857f; font-size: 11.5px; }
-    .rule { stroke: #dcdbd5; stroke-width: 1; }
-    .grid { stroke: #e8e7e2; stroke-width: 1; }
-    .base { stroke: #b8b7b0; stroke-width: 1.5; }
-
-    .row  { fill: #2a78d6; }
-    .atm  { fill: #eb6834; }
-    .hier { fill: #1baf7a; }
-    .rowS { stroke: #2a78d6; }
-    .hierS{ stroke: #1baf7a; }
-    .margin { stroke: #e34948; stroke-width: 1.5; stroke-dasharray: 5 4; }
-    .marginT{ fill: #e34948; font-size: 11.5px; font-weight: 620; }
-
+    .panel{ fill: #0b0b0b; font-size: 13px; font-weight: 700; }
+    .lab  { fill: #0b0b0b; font-size: 11.5px; }
+    .labB { fill: #0b0b0b; font-size: 11.5px; font-weight: 600; }
+    .mut  { fill: #77766f; font-size: 10.5px; }
+    .val  { fill: #0b0b0b; font-size: 12px; }
+    .drpv { fill: #a5a49d; font-size: 12px; }
+    .axis { stroke: #0b0b0b; stroke-width: 1; }
+    .tick { stroke: #0b0b0b; stroke-width: 1; }
+    .grid { stroke: #e6e5df; stroke-width: 1; }
+    .cell { fill: none; stroke: #9a9992; stroke-width: 1; }
+    .drop { fill: none; stroke: #c6c5be; stroke-width: 1; stroke-dasharray: 3 2.5; }
+    .blue   { fill: #2a78d6; }
+    .orange { fill: #eb6834; }
+    .gray   { fill: #b3b2ab; }
+    .blueS  { stroke: #2a78d6; }
+    .orangeS{ stroke: #eb6834; }
+    .marg { stroke: #cf3f36; stroke-width: 1; stroke-dasharray: 4 3; }
+    .margT{ fill: #cf3f36; font-size: 10.5px; font-weight: 600; }
+    .sep  { stroke: #dcdbd5; stroke-width: 1; }
     @media (prefers-color-scheme: dark) {
-      .h1, .h2, .val, .lab { fill: #ffffff; }
-      .body { fill: #c3c2b7; }
-      .mute { fill: #91908a; }
-      .rule { stroke: #3a3a37; }
+      .panel,.lab,.labB,.val { fill: #f0f0ee; }
+      .mut  { fill: #91908a; }
+      .drpv { fill: #6e6d67; }
+      .axis,.tick { stroke: #f0f0ee; }
       .grid { stroke: #2c2c2a; }
-      .base { stroke: #55544f; }
-      .row  { fill: #3987e5; } .rowS  { stroke: #3987e5; }
-      .atm  { fill: #d95926; }
-      .hier { fill: #199e70; } .hierS { stroke: #199e70; }
-      .margin { stroke: #e66767; } .marginT { fill: #e66767; }
+      .cell { stroke: #6f6e68; }
+      .drop { stroke: #4a4945; }
+      .gray { fill: #55544e; }
+      .blue { fill: #3987e5; } .blueS { stroke: #3987e5; }
+      .orange { fill: #ee7a42; } .orangeS { stroke: #ee7a42; }
+      .marg { stroke: #e66761; } .margT { fill: #e66761; }
+      .sep  { stroke: #3a3a37; }
     }
   </style>
-
-  <text class="h1" x="24" y="28">What determinism costs</text>
-  <text class="body" x="24" y="50">Two views of the same five sessions on two H100s. Left: the converter alone. Right: the complete 48-layer decode step.</text>
-  <line class="rule" x1="24" y1="66" x2="876" y2="66"/>
-
-  <!-- ================= LEFT: converter segment ================= -->
-  <text class="h2" x="24" y="96">Converter segment</text>
-  <text class="mute" x="24" y="114">µs per graph replay, timed in isolation. Lower is better.</text>
-
-  <!-- scale: 0..260 µs mapped to x 140..322 (0.7 px per µs) -->
-  <line class="base" x1="140" y1="132" x2="140" y2="250"/>
-  <line class="grid" x1="210" y1="132" x2="210" y2="250"/>
-  <line class="grid" x1="280" y1="132" x2="280" y2="250"/>
-  <g class="mute" text-anchor="middle"><text x="140" y="284">0</text><text x="210" y="284">100</text><text x="280" y="284">200 µs</text></g>
-
-  <text class="lab" x="130" y="154" text-anchor="end">row-wide</text>
-  <rect class="row" x="140" y="140" width="84" height="20" rx="4"/>
-  <text class="val" x="234" y="155">120 µs</text>
-
-  <text class="lab" x="130" y="192" text-anchor="end">atomic</text>
-  <rect class="atm" x="140" y="178" width="136" height="20" rx="4"/>
-  <text class="val" x="286" y="193">194 µs</text>
-
-  <text class="lab" x="130" y="230" text-anchor="end">hierarchical</text>
-  <rect class="hier" x="140" y="216" width="167" height="20" rx="4"/>
-  <text class="val" x="317" y="231">239 µs</text>
-
-  <text class="h2" x="24" y="308">The deterministic converter is the cheap one.</text>
-  <text class="body" x="24" y="329">Row-wide does the atomic baseline's work in <tspan class="mono">38%</tspan> less</text>
-  <text class="body" x="24" y="347">time: one launch, one row-wide scan, no atomic traffic.</text>
-  <text class="body" x="24" y="365">Hierarchical buys a bounded per-program working set</text>
-  <text class="body" x="24" y="383">with four launches — and earns it back at 64K.</text>
-
-  <!-- ================= RIGHT: complete step ================= -->
-  <text class="h2" x="420" y="96">Complete decode step</text>
-  <text class="mute" x="420" y="114">ratio vs. the atomic baseline. 1.00 = free.</text>
-
-  <!-- scale: 0.99..1.02 mapped to x 540..800 -->
-  <line class="grid" x1="540" y1="132" x2="540" y2="250"/>
-  <line class="base" x1="627" y1="128" x2="627" y2="254"/>
-  <line class="margin" x1="713" y1="128" x2="713" y2="254"/>
-  <g class="mute" text-anchor="middle">
-    <text x="540" y="284">0.99</text><text x="627" y="284">1.00</text><text x="800" y="284">1.02</text>
-  </g>
-  <text class="marginT" x="713" y="122" text-anchor="middle">1.01 margin, fixed in advance</text>
-
-  <!-- row-wide 32K: 1.000031 [0.997373, 1.002696] -->
-  <text class="lab" x="530" y="152" text-anchor="end">row-wide · 32K</text>
-  <line class="rowS" x1="604" y1="147" x2="650" y2="147" stroke-width="2.5" stroke-linecap="round"/>
-  <circle class="row" cx="627" cy="147" r="5"/>
-  <text class="val mono" x="876" y="151" text-anchor="end">1.00003</text>
-  <text class="mute" x="530" y="167" text-anchor="end">primary endpoint</text>
-
-  <!-- hierarchical 32K: 1.000580 [0.997800, 1.003368] -->
-  <text class="lab" x="530" y="192" text-anchor="end">hierarchical · 32K</text>
-  <line class="hierS" x1="607" y1="187" x2="656" y2="187" stroke-width="2.5" stroke-linecap="round"/>
-  <circle class="hier" cx="631" cy="187" r="5"/>
-  <text class="val mono" x="876" y="191" text-anchor="end">1.00058</text>
-
-  <!-- hierarchical 64K: 1.002178 [0.995750, 1.008648] -->
-  <text class="lab" x="530" y="222" text-anchor="end">hierarchical · 64K</text>
-  <line class="hierS" x1="590" y1="217" x2="702" y2="217" stroke-width="2.5" stroke-linecap="round"/>
-  <circle class="hier" cx="645" cy="217" r="5"/>
-  <text class="val mono" x="876" y="221" text-anchor="end">1.00218</text>
-
-  <!-- row-wide 64K: 1.014006 [1.010326, 1.017700] -->
-  <text class="lab" x="530" y="252" text-anchor="end">row-wide · 64K</text>
-  <line class="rowS" x1="716" y1="247" x2="779" y2="247" stroke-width="2.5" stroke-linecap="round"/>
-  <circle class="row" cx="747" cy="247" r="5"/>
-  <text class="val mono" x="876" y="251" text-anchor="end">1.01401</text>
-  <text class="marginT" x="530" y="267" text-anchor="end">a real cost, disclosed</text>
-
-  <text class="h2" x="420" y="308">Free at 32K. Not free everywhere.</text>
-  <text class="body" x="420" y="329">Three of the four contrasts sit on 1.00. The fourth does not:</text>
-  <text class="body" x="420" y="347">the row-wide arm at 64K is <tspan class="mono">1.4%</tspan> slower, reproduced in all five</text>
-  <text class="body" x="420" y="365">sessions, arising downstream of its unchanged converter.</text>
-  <text class="body" x="420" y="383">Use <tspan class="mono">localize_hierarchical</tspan> at long context.</text>
-
-  <line class="rule" x1="24" y1="410" x2="876" y2="410"/>
-  <text class="body" x="24" y="434">Five fresh two-process sessions, randomized paired blocks, 98.75% simultaneous intervals over the four-contrast family. Measured on a</text>
-  <text class="body" x="24" y="452">single-purpose reference executor, not a serving runtime under load: its capture-safe dense-weighted mixture-of-experts inflates the</text>
-  <text class="body" x="24" y="470">per-step denominator identically for every arm. Every number here is in <tspan class="mono">evidence/05-full-decode-canary/analysis.json</tspan>.</text>
+  <text class="panel" x="24" y="26">(a) converter segment, timed in isolation</text>
+  <text class="mut" x="24" y="42">µs per captured-graph replay of all 48 layers, 32K context, 2× H100</text>
+  <line class="grid" x1="130.0" y1="58" x2="130.0" y2="154"/>
+  <line class="grid" x1="178.0" y1="58" x2="178.0" y2="154"/>
+  <line class="grid" x1="226.0" y1="58" x2="226.0" y2="154"/>
+  <line class="grid" x1="274.0" y1="58" x2="274.0" y2="154"/>
+  <line class="grid" x1="322.0" y1="58" x2="322.0" y2="154"/>
+  <line class="grid" x1="370.0" y1="58" x2="370.0" y2="154"/>
+  <text class="lab" x="122" y="79" text-anchor="end">row-wide</text>
+  <rect class="blue" x="130" y="66" width="115.2" height="18"/>
+  <text class="val mono" x="251.2" y="79.5">120.0</text>
+  <text class="lab" x="122" y="109" text-anchor="end">atomic</text>
+  <rect class="gray" x="130" y="96" width="186.6" height="18"/>
+  <text class="val mono" x="322.6" y="109.5">194.4</text>
+  <text class="lab" x="122" y="139" text-anchor="end">hierarchical</text>
+  <rect class="orange" x="130" y="126" width="230.1" height="18"/>
+  <text class="val mono" x="366.1" y="139.5">239.7</text>
+  <line class="axis" x1="130" y1="154" x2="370.0" y2="154"/>
+  <line class="tick" x1="130.0" y1="154" x2="130.0" y2="158"/>
+  <text class="mut" x="130.0" y="170" text-anchor="middle">0</text>
+  <line class="tick" x1="178.0" y1="154" x2="178.0" y2="158"/>
+  <text class="mut" x="178.0" y="170" text-anchor="middle">50</text>
+  <line class="tick" x1="226.0" y1="154" x2="226.0" y2="158"/>
+  <text class="mut" x="226.0" y="170" text-anchor="middle">100</text>
+  <line class="tick" x1="274.0" y1="154" x2="274.0" y2="158"/>
+  <text class="mut" x="274.0" y="170" text-anchor="middle">150</text>
+  <line class="tick" x1="322.0" y1="154" x2="322.0" y2="158"/>
+  <text class="mut" x="322.0" y="170" text-anchor="middle">200</text>
+  <line class="tick" x1="370.0" y1="154" x2="370.0" y2="158"/>
+  <text class="mut" x="370.0" y="170" text-anchor="middle">250</text>
+  <text class="mut" x="250.0" y="184" text-anchor="middle">converter time (µs / step)</text>
+  <text class="lab" x="24" y="208">The deterministic row-wide kernel does the atomic baseline's</text>
+  <text class="lab" x="24" y="223">work in 38% less time — a scan, without the atomic traffic.</text>
+  <text class="panel" x="470" y="26">(b) complete decode step, ratio vs. atomic</text>
+  <text class="mut" x="470" y="42">5 sessions, 98.75% simultaneous t-intervals; 1.00 = no cost</text>
+  <line class="grid" x1="614.2" y1="58" x2="614.2" y2="186" stroke-width="1.2"/>
+  <line class="marg" x1="729.6" y1="62" x2="729.6" y2="186"/>
+  <text class="margT" x="736.6" y="74">1.01 margin,</text>
+  <text class="margT" x="736.6" y="86">prespecified</text>
+  <text class="lab" x="535" y="80" text-anchor="end">row-wide · 32K</text>
+  <line class="blueS" x1="583.9" y1="76" x2="645.3" y2="76" stroke-width="1.5"/>
+  <line class="blueS" x1="583.9" y1="72" x2="583.9" y2="80" stroke-width="1.5"/>
+  <line class="blueS" x1="645.3" y1="72" x2="645.3" y2="80" stroke-width="1.5"/>
+  <circle class="blue" cx="614.6" cy="76" r="4"/>
+  <text class="mut" x="653.3" y="80">primary</text>
+  <text class="lab" x="535" y="110" text-anchor="end">hierarchical · 32K</text>
+  <line class="orangeS" x1="588.8" y1="106" x2="653.1" y2="106" stroke-width="1.5"/>
+  <line class="orangeS" x1="588.8" y1="102" x2="588.8" y2="110" stroke-width="1.5"/>
+  <line class="orangeS" x1="653.1" y1="102" x2="653.1" y2="110" stroke-width="1.5"/>
+  <circle class="orange" cx="620.9" cy="106" r="4"/>
+  <text class="lab" x="535" y="140" text-anchor="end">hierarchical · 64K</text>
+  <line class="orangeS" x1="565.2" y1="136" x2="714.0" y2="136" stroke-width="1.5"/>
+  <line class="orangeS" x1="565.2" y1="132" x2="565.2" y2="140" stroke-width="1.5"/>
+  <line class="orangeS" x1="714.0" y1="132" x2="714.0" y2="140" stroke-width="1.5"/>
+  <circle class="orange" cx="639.4" cy="136" r="4"/>
+  <text class="lab" x="535" y="170" text-anchor="end">row-wide · 64K</text>
+  <line class="blueS" x1="733.4" y1="166" x2="818.5" y2="166" stroke-width="1.5"/>
+  <line class="blueS" x1="733.4" y1="162" x2="733.4" y2="170" stroke-width="1.5"/>
+  <line class="blueS" x1="818.5" y1="162" x2="818.5" y2="170" stroke-width="1.5"/>
+  <circle class="blue" cx="775.8" cy="166" r="4"/>
+  <text class="mut" x="826.5" y="170">+1.4%</text>
+  <line class="axis" x1="545" y1="186" x2="845" y2="186"/>
+  <line class="tick" x1="556.5" y1="186" x2="556.5" y2="190"/>
+  <text class="mut" x="556.5" y="202" text-anchor="middle">0.995</text>
+  <line class="tick" x1="614.2" y1="186" x2="614.2" y2="190"/>
+  <text class="mut" x="614.2" y="202" text-anchor="middle">1.000</text>
+  <line class="tick" x1="671.9" y1="186" x2="671.9" y2="190"/>
+  <text class="mut" x="671.9" y="202" text-anchor="middle">1.005</text>
+  <line class="tick" x1="729.6" y1="186" x2="729.6" y2="190"/>
+  <text class="mut" x="729.6" y="202" text-anchor="middle">1.010</text>
+  <line class="tick" x1="787.3" y1="186" x2="787.3" y2="190"/>
+  <text class="mut" x="787.3" y="202" text-anchor="middle">1.015</text>
+  <line class="tick" x1="845.0" y1="186" x2="845.0" y2="190"/>
+  <text class="mut" x="845.0" y="202" text-anchor="middle">1.020</text>
+  <text class="mut" x="695.0" y="216" text-anchor="middle">step-time ratio vs. atomic baseline</text>
+  <text class="lab" x="470" y="240">Three contrasts sit on 1.00. The fourth is a real, disclosed cost:</text>
+  <text class="lab" x="470" y="255">row-wide at 64K, reproduced in all five sessions — use the</text>
+  <text class="lab" x="470" y="270">hierarchical kernel at long context.</text>
+  <line class="sep" x1="24" y1="300" x2="876" y2="300"/>
+  <text class="mut" x="24" y="318">Randomized paired blocks within five fresh two-process sessions; margins fixed before any observation. Measured on a single-purpose reference
+  </text><text class="mut" x="24" y="333">executor, not a serving path under load. Values: <tspan class="mono">evidence/05-full-decode-canary/</tspan> (analysis.json, segments.json).</text>
 </svg>

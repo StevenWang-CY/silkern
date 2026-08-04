@@ -150,7 +150,7 @@ deliberately boring Python.
 
 ## What it costs
 
-<img src="https://raw.githubusercontent.com/StevenWang-CY/silkern/main/assets/fig-cost.svg" alt="Left: converter segment time — row-wide 120 microseconds, atomic 194, hierarchical 239. Right: complete decode step ratios versus the atomic baseline, with the row-wide 64K contrast exceeding the 1.01 margin." width="100%">
+<img src="https://raw.githubusercontent.com/StevenWang-CY/silkern/main/assets/fig-cost.svg" alt="Panel a: converter segment time — row-wide 120.0 microseconds, atomic 194.4, hierarchical 239.7. Panel b: forest plot of complete decode step ratios versus the atomic baseline with 98.75 percent intervals; three contrasts sit on 1.00 inside the prespecified 1.01 margin, while row-wide at 64K exceeds it at 1.014." width="100%">
 
 Less than nothing, at the converter. The row-wide kernel does the atomic
 baseline's work in 38% less time, because a row-wide scan beats a scan *plus*

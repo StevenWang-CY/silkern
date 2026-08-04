@@ -1,115 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img"
-     aria-label="The localization contract in five stages: request routing, ownership filter, deinterleave, paged translation, stable front compaction. One worked example is carried through all five.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" role="img"
+     aria-label="The localization contract in five stages with one worked example: request routing, ownership filter, deinterleave, paged translation, stable front compaction, ending in physical prefix 708 129 451 with exact count 3.">
   <style>
-    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    text  { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .h1   { fill: #0b0b0b; font-size: 19px; font-weight: 650; }
-    .st   { fill: #0b0b0b; font-size: 14px; font-weight: 620; }
-    .body { fill: #52514e; font-size: 12.5px; }
-    .mute { fill: #86857f; font-size: 11.5px; }
-    .num  { fill: #0b0b0b; font-size: 12.5px; }
-    .rule { stroke: #dcdbd5; stroke-width: 1; }
-    .arrow{ stroke: #b8b7b0; stroke-width: 1.75; fill: none; }
-    .step { fill: #2a78d6; font-size: 11px; font-weight: 700; }
-
-    .keep  { fill: #2a78d6; fill-opacity: 0.13; stroke: #2a78d6; stroke-width: 1.25; }
-    .drop  { fill: none; stroke: #c9c8c2; stroke-width: 1.25; stroke-dasharray: 3 3; }
-    .dropt { fill: #a3a29b; font-size: 12.5px; }
-    .tbl   { fill: #1baf7a; fill-opacity: 0.13; stroke: #1baf7a; stroke-width: 1.25; }
-
+    .panel{ fill: #0b0b0b; font-size: 13px; font-weight: 700; }
+    .lab  { fill: #0b0b0b; font-size: 11.5px; }
+    .labB { fill: #0b0b0b; font-size: 11.5px; font-weight: 600; }
+    .mut  { fill: #77766f; font-size: 10.5px; }
+    .val  { fill: #0b0b0b; font-size: 12px; }
+    .drpv { fill: #a5a49d; font-size: 12px; }
+    .axis { stroke: #0b0b0b; stroke-width: 1; }
+    .tick { stroke: #0b0b0b; stroke-width: 1; }
+    .grid { stroke: #e6e5df; stroke-width: 1; }
+    .cell { fill: none; stroke: #9a9992; stroke-width: 1; }
+    .drop { fill: none; stroke: #c6c5be; stroke-width: 1; stroke-dasharray: 3 2.5; }
+    .blue   { fill: #2a78d6; }
+    .orange { fill: #eb6834; }
+    .gray   { fill: #b3b2ab; }
+    .blueS  { stroke: #2a78d6; }
+    .orangeS{ stroke: #eb6834; }
+    .marg { stroke: #cf3f36; stroke-width: 1; stroke-dasharray: 4 3; }
+    .margT{ fill: #cf3f36; font-size: 10.5px; font-weight: 600; }
+    .sep  { stroke: #dcdbd5; stroke-width: 1; }
     @media (prefers-color-scheme: dark) {
-      .h1, .st, .num { fill: #ffffff; }
-      .body { fill: #c3c2b7; }
-      .mute { fill: #91908a; }
-      .rule { stroke: #3a3a37; }
-      .arrow{ stroke: #55544f; }
-      .step { fill: #3987e5; }
-      .keep { fill: #3987e5; fill-opacity: 0.22; stroke: #3987e5; }
+      .panel,.lab,.labB,.val { fill: #f0f0ee; }
+      .mut  { fill: #91908a; }
+      .drpv { fill: #6e6d67; }
+      .axis,.tick { stroke: #f0f0ee; }
+      .grid { stroke: #2c2c2a; }
+      .cell { stroke: #6f6e68; }
       .drop { stroke: #4a4945; }
-      .dropt{ fill: #6e6d67; }
-      .tbl  { fill: #199e70; fill-opacity: 0.22; stroke: #199e70; }
+      .gray { fill: #55544e; }
+      .blue { fill: #3987e5; } .blueS { stroke: #3987e5; }
+      .orange { fill: #ee7a42; } .orangeS { stroke: #ee7a42; }
+      .marg { stroke: #e66761; } .margT { fill: #e66761; }
+      .sep  { stroke: #3a3a37; }
     }
   </style>
-
-  <text class="h1" x="24" y="28">Global logical positions in. Rank-local physical slots out. Order preserved.</text>
-  <text class="body" x="24" y="50">One row, worked all the way through. <tspan class="mono">dcp_size=2  dcp_rank=0  interleave=1  block_size=64  request=3</tspan></text>
-  <line class="rule" x1="24" y1="66" x2="876" y2="66"/>
-
-  <!-- ===== stage 0: input ===== -->
-  <text class="st" x="24" y="96">what the selector returned</text>
-  <text class="mute" x="24" y="114">global logical token positions, in the selector's order</text>
-  <g class="keep">
-    <rect x="24" y="126" width="56" height="26" rx="4"/><rect x="86" y="126" width="56" height="26" rx="4"/>
-    <rect x="148" y="126" width="56" height="26" rx="4"/><rect x="210" y="126" width="56" height="26" rx="4"/>
-    <rect x="272" y="126" width="56" height="26" rx="4"/><rect x="334" y="126" width="56" height="26" rx="4"/>
-  </g>
-  <g class="num mono" text-anchor="middle">
-    <text x="52" y="144">8</text><text x="114" y="144">5</text><text x="176" y="144">130</text>
-    <text x="238" y="144">7</text><text x="300" y="144">-1</text><text x="362" y="144">262</text>
-  </g>
-
-  <!-- the page table, off to the right, used by stage 4 -->
-  <text class="st" x="560" y="96">the request's page table</text>
-  <text class="mute" x="560" y="114"><tspan class="mono">block_table[3]</tspan> — fragmented, per request. Used in stage 4.</text>
-  <g class="tbl">
-    <rect x="560" y="126" width="50" height="26" rx="4"/><rect x="616" y="126" width="50" height="26" rx="4"/>
-    <rect x="672" y="126" width="50" height="26" rx="4"/><rect x="728" y="126" width="50" height="26" rx="4"/>
-  </g>
-  <g class="num mono" text-anchor="middle">
-    <text x="585" y="144">11</text><text x="641" y="144">2</text><text x="697" y="144">7</text><text x="753" y="144">5</text>
-  </g>
-  <g class="mute mono" text-anchor="middle">
-    <text x="585" y="166">blk 0</text><text x="641" y="166">blk 1</text><text x="697" y="166">blk 2</text><text x="753" y="166">blk 3</text>
-  </g>
-
-  <path class="arrow" d="M 200 168 L 200 190"/>
-
-  <!-- ===== stage 1-2: routing + ownership ===== -->
-  <text class="step" x="24" y="212">1 · 2</text>
-  <text class="st" x="66" y="212">route to the request, then drop what this rank does not own</text>
-  <text class="mute" x="66" y="230"><tspan class="mono">owner = (token // interleave) % dcp_size</tspan> — negatives are invalid; foreign tokens are someone else's job</text>
-  <g class="keep"><rect x="24" y="242" width="56" height="26" rx="4"/></g>
-  <g class="drop"><rect x="86" y="242" width="56" height="26" rx="4"/></g>
-  <g class="keep"><rect x="148" y="242" width="56" height="26" rx="4"/></g>
-  <g class="drop"><rect x="210" y="242" width="56" height="26" rx="4"/><rect x="272" y="242" width="56" height="26" rx="4"/></g>
-  <g class="keep"><rect x="334" y="242" width="56" height="26" rx="4"/></g>
-  <g class="num mono" text-anchor="middle"><text x="52" y="260">8</text><text x="176" y="260">130</text><text x="362" y="260">262</text></g>
-  <g class="dropt mono" text-anchor="middle"><text x="114" y="260">5</text><text x="238" y="260">7</text><text x="300" y="260">-1</text></g>
-  <g class="mute" text-anchor="middle" font-size="10.5">
-    <text x="114" y="280">rank 1</text><text x="238" y="280">rank 1</text><text x="300" y="280">invalid</text>
-  </g>
-
-  <path class="arrow" d="M 200 292 L 200 314"/>
-
-  <!-- ===== stage 3: deinterleave ===== -->
-  <text class="step" x="24" y="336">3</text>
-  <text class="st" x="66" y="336">deinterleave to this rank's local index space</text>
-  <text class="mute" x="66" y="354"><tspan class="mono">local = (token // (dcp_size * interleave)) * interleave + token % interleave</tspan></text>
-  <g class="keep">
-    <rect x="24" y="366" width="56" height="26" rx="4"/><rect x="148" y="366" width="56" height="26" rx="4"/>
-    <rect x="334" y="366" width="56" height="26" rx="4"/>
-  </g>
-  <g class="num mono" text-anchor="middle"><text x="52" y="384">4</text><text x="176" y="384">65</text><text x="362" y="384">131</text></g>
-  <g class="mute mono" text-anchor="middle" font-size="10.5">
-    <text x="52" y="404">blk 0 · off 4</text><text x="176" y="404">blk 1 · off 1</text><text x="362" y="404">blk 2 · off 3</text>
-  </g>
-
-  <path class="arrow" d="M 200 416 L 200 438"/>
-
-  <!-- ===== stage 4-5: paged translation + stable compaction ===== -->
-  <text class="step" x="24" y="460">4 · 5</text>
-  <text class="st" x="66" y="460">translate through the page table, then compact to a front prefix — in input order</text>
-  <text class="mute" x="66" y="478"><tspan class="mono">physical = block_table[blk] * block_size + off</tspan>; survivors keep their relative order, tail is <tspan class="mono">-1</tspan></text>
-  <g class="keep">
-    <rect x="24" y="486" width="56" height="26" rx="4"/><rect x="86" y="486" width="56" height="26" rx="4"/>
-    <rect x="148" y="486" width="56" height="26" rx="4"/>
-  </g>
-  <g class="drop">
-    <rect x="210" y="486" width="56" height="26" rx="4"/><rect x="272" y="486" width="56" height="26" rx="4"/>
-    <rect x="334" y="486" width="56" height="26" rx="4"/>
-  </g>
-  <g class="num mono" text-anchor="middle"><text x="52" y="504">708</text><text x="114" y="504">129</text><text x="176" y="504">451</text></g>
-  <g class="dropt mono" text-anchor="middle"><text x="238" y="504">-1</text><text x="300" y="504">-1</text><text x="362" y="504">-1</text></g>
-  <text class="st" x="420" y="496">count = 3</text>
-  <text class="mute" x="420" y="513">exact, not an upper bound</text>
+  <text class="labB" x="24" y="26">The localization contract — one row worked through all five stages</text>
+  <text class="mut mono" x="24" y="43">dcp_size=2   dcp_rank=0   interleave=1   block_size=64   request=3</text>
+  <text class="labB" x="24" y="74">input</text>
+  <text class="mut" x="24" y="89">global logical positions, selector order</text>
+  <rect class="cell" x="24" y="97" width="50" height="24"/>
+  <text class="val mono" x="49.0" y="113.5" text-anchor="middle">8</text>
+  <rect class="cell" x="79" y="97" width="50" height="24"/>
+  <text class="val mono" x="104.0" y="113.5" text-anchor="middle">5</text>
+  <rect class="cell" x="134" y="97" width="50" height="24"/>
+  <text class="val mono" x="159.0" y="113.5" text-anchor="middle">130</text>
+  <rect class="cell" x="189" y="97" width="50" height="24"/>
+  <text class="val mono" x="214.0" y="113.5" text-anchor="middle">7</text>
+  <rect class="cell" x="244" y="97" width="50" height="24"/>
+  <text class="val mono" x="269.0" y="113.5" text-anchor="middle">-1</text>
+  <rect class="cell" x="299" y="97" width="50" height="24"/>
+  <text class="val mono" x="324.0" y="113.5" text-anchor="middle">262</text>
+  <text class="labB" x="560" y="74">page table</text>
+  <text class="mut" x="560" y="89"><tspan class="mono">block_table[3]</tspan> — fragmented, per request; used in stage 4</text>
+  <rect class="cell" x="560" y="97" width="50" height="24"/>
+  <text class="val mono" x="585.0" y="113.5" text-anchor="middle">11</text>
+  <rect class="cell" x="615" y="97" width="50" height="24"/>
+  <text class="val mono" x="640.0" y="113.5" text-anchor="middle">2</text>
+  <rect class="cell" x="670" y="97" width="50" height="24"/>
+  <text class="val mono" x="695.0" y="113.5" text-anchor="middle">7</text>
+  <rect class="cell" x="725" y="97" width="50" height="24"/>
+  <text class="val mono" x="750.0" y="113.5" text-anchor="middle">5</text>
+  <text class="mut mono" x="585" y="139" text-anchor="middle">blk0</text><text class="mut mono" x="640" y="139" text-anchor="middle">blk1</text><text class="mut mono" x="695" y="139" text-anchor="middle">blk2</text><text class="mut mono" x="750" y="139" text-anchor="middle">blk3</text>
+  <line class="axis" x1="180" y1="129" x2="180" y2="147"/><path class="axis" fill="none" d="M 176 143 L 180 148 L 184 143"/>
+  <text class="labB" x="24" y="172">stages 1–2 · route to the request, drop what this rank does not own</text>
+  <text class="mut mono" x="24" y="187">owner = (token // interleave) % dcp_size ; negatives invalid</text>
+  <rect class="cell" x="24" y="195" width="50" height="24"/>
+  <text class="val mono" x="49.0" y="211.5" text-anchor="middle">8</text>
+  <rect class="drop" x="79" y="195" width="50" height="24"/>
+  <text class="drpv mono" x="104.0" y="211.5" text-anchor="middle">5</text>
+  <rect class="cell" x="134" y="195" width="50" height="24"/>
+  <text class="val mono" x="159.0" y="211.5" text-anchor="middle">130</text>
+  <rect class="drop" x="189" y="195" width="50" height="24"/>
+  <text class="drpv mono" x="214.0" y="211.5" text-anchor="middle">7</text>
+  <rect class="drop" x="244" y="195" width="50" height="24"/>
+  <text class="drpv mono" x="269.0" y="211.5" text-anchor="middle">-1</text>
+  <rect class="cell" x="299" y="195" width="50" height="24"/>
+  <text class="val mono" x="324.0" y="211.5" text-anchor="middle">262</text>
+  <text class="mut" x="49" y="237" text-anchor="middle"> </text>
+  <g class="mut" text-anchor="middle" font-size="10"><text x="129" y="237">rank 1</text><text x="239" y="237">rank 1</text><text x="294" y="237">invalid</text></g>
+  <line class="axis" x1="180" y1="227" x2="180" y2="245"/><path class="axis" fill="none" d="M 176 241 L 180 246 L 184 241"/>
+  <text class="labB" x="24" y="270">stage 3 · deinterleave to this rank's local index space</text>
+  <text class="mut mono" x="24" y="285">local = (token // (dcp_size*interleave)) * interleave + token % interleave</text>
+  <rect class="cell" x="24" y="293" width="50" height="24"/>
+  <text class="val mono" x="49.0" y="309.5" text-anchor="middle">4</text>
+  <rect class="cell" x="79" y="293" width="50" height="24"/>
+  <text class="val mono" x="104.0" y="309.5" text-anchor="middle">65</text>
+  <rect class="cell" x="134" y="293" width="50" height="24"/>
+  <text class="val mono" x="159.0" y="309.5" text-anchor="middle">131</text>
+  <g class="mut mono" text-anchor="middle" font-size="10"><text x="49" y="335">blk0·off4</text><text x="104" y="335">blk1·off1</text><text x="159" y="335">blk2·off3</text></g>
+  <line class="axis" x1="224" y1="325" x2="224" y2="343"/><path class="axis" fill="none" d="M 220 339 L 224 344 L 228 339"/>
+  <text class="labB" x="24" y="368">stages 4–5 · translate through the page table, compact to a front prefix in input order</text>
+  <text class="mut mono" x="24" y="383">physical = block_table[blk] * block_size + off ; survivors keep relative order, tail = -1</text>
+  <rect class="cell" x="24" y="391" width="50" height="24"/>
+  <text class="val mono" x="49.0" y="407.5" text-anchor="middle">708</text>
+  <rect class="cell" x="79" y="391" width="50" height="24"/>
+  <text class="val mono" x="104.0" y="407.5" text-anchor="middle">129</text>
+  <rect class="cell" x="134" y="391" width="50" height="24"/>
+  <text class="val mono" x="159.0" y="407.5" text-anchor="middle">451</text>
+  <rect class="drop" x="189" y="391" width="50" height="24"/>
+  <text class="drpv mono" x="214.0" y="407.5" text-anchor="middle">-1</text>
+  <rect class="drop" x="244" y="391" width="50" height="24"/>
+  <text class="drpv mono" x="269.0" y="407.5" text-anchor="middle">-1</text>
+  <rect class="drop" x="299" y="391" width="50" height="24"/>
+  <text class="drpv mono" x="324.0" y="407.5" text-anchor="middle">-1</text>
+  <text class="labB mono" x="380" y="407">count = 3</text>
+  <text class="mut" x="380" y="421">exact, not an upper bound</text>
+  <line class="sep" x1="24" y1="437" x2="876" y2="437"/>
+  <text class="mut" x="24" y="455">The reference oracle defines every stage in pure Python; both GPU kernels must reproduce it elementwise — set, count, and order.</text>
 </svg>
