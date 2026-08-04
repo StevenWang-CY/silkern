@@ -118,7 +118,7 @@
   <rect class="cell" x="474" y="204" width="46" height="26"/>
   <rect class="chg" x="474" y="204" width="46" height="26"/>
   <text class="val mono" x="497.0" y="221.5" text-anchor="middle">133</text>
-  <text class="noteB" x="110" y="258">3 distinct permutations in 3 replays.<tspan class="mut" font-weight="400">&#160;&#160;Measured on two H100s: 17&#8211;20 distinct orders per 20 replays.</tspan></text>
+  <text class="noteB" x="110" y="258">3 distinct permutations in 3 replays.<tspan class="mut" font-weight="400">&#160;&#160;Measured on two B200s: 17&#8211;20 distinct orders per 20 replays.</tspan></text>
   <text class="ph" x="24" y="300">(b)&#160;&#160;silkern, either kernel</text>
   <text class="mut" x="24" y="318">row-wide scan, or deterministic tile-prefix composition &#8212; no atomics</text>
   <text class="mutS mono" x="100" y="351" text-anchor="end">replay 1</text>

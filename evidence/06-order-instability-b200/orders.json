@@ -1,0 +1,126 @@
+{
+  "schema": "silkern.evidence.e64.order-instability.v1",
+  "experiment": "E64",
+  "description": "Unique consumed-prefix orders observed per 20 CUDA-graph replays of byte-identical input, per rank and record, on the live two-GPU (2x NVIDIA B200) paired step. The atomic-reservation converter's consumed order varies per replay; the stable converter emits exactly one. Extracted mechanically from the frozen E64 raw record; no value was re-typed.",
+  "device": "2x NVIDIA B200",
+  "replays_per_measurement": 20,
+  "records": [
+    {
+      "record": 0,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 19
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 1,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 2,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 3,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 4,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 19
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 5,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 17
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 6,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 19
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 7,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 8,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    },
+    {
+      "record": 9,
+      "atomic_unique_consumed_orders": {
+        "rank0": 20,
+        "rank1": 20
+      },
+      "stable_unique_consumed_orders": {
+        "rank0": 1,
+        "rank1": 1
+      }
+    }
+  ],
+  "summary": {
+    "atomic_min": 17,
+    "atomic_max": 20,
+    "stable_min": 1,
+    "stable_max": 1,
+    "measurements": 20
+  }
+}

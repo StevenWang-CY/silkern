@@ -32,9 +32,10 @@ You can watch it:
 python -m bench.order_instability
 ```
 
-Measured on two H100s, one selection row, 20 replays of byte-identical input:
-**17 to 20 distinct consumed orders**. Both `silkern` implementations return
-exactly one.
+Measured on a live two-B200 pair, one selection row, 20 replays of
+byte-identical input: **17 to 20 distinct consumed orders** from the atomic
+converter; both `silkern` implementations return exactly one
+([`evidence/06`](../evidence/06-order-instability-b200/)).
 
 ## Why a different order is a different answer
 

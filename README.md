@@ -196,7 +196,7 @@ Read this before deploying it, not after.
   executor, not a production serving path under load. There is no TPOT-under-load
   measurement here, and this repository does not claim one.
 - **One model family** in the trained-weight evidence.
-- Row width is capped at 4096 for the row-wide kernel.
+- Selection-row width is capped at 4096 for both kernels.
 
 ## Integrating with vLLM
 
