@@ -8,6 +8,9 @@
     .thread{ fill: none; stroke-width: 5.2; stroke-linecap: round; }
     .kblue  { fill: none; stroke: url(#gBlue);   stroke-width: 7; stroke-linecap: round; }
     .korange{ fill: none; stroke: url(#gOrange); stroke-width: 7; stroke-linecap: round; }
+    .draw   { stroke-dasharray: 100; stroke-dashoffset: 0; animation: weave 1.5s cubic-bezier(.55,0,.2,1) both; }
+    @keyframes weave { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .draw { animation: none; } }
     @media (prefers-color-scheme: dark) {
       .ink  { fill: #f2f2f0; }
       .soft { fill: #c9c9c6; }
@@ -24,8 +27,11 @@
     </linearGradient>
   </defs>
   <g transform="translate(19,82) scale(1.62)">
-    <path class="kblue" d="M 31.6 -37.2 C 24.5 -30.5, 17.5 -24.8, 8.6 -20.4"/>
-    <rect class="ink" x="4.44" y="-40" width="7.56" height="40" rx="1"/>
-    <path class="korange" d="M 8.2 -20.6 C 17.5 -15.5, 26.5 -8.5, 32.6 -2.6"/>
+    <path class="kblue draw" pathLength="100" d="M 31.6 -37.2 C 24.5 -30.5, 17 -25.2, 7.4 -22.6"/>
+    <rect class="ink" x="4.44" y="-40" width="7.56" height="8.65" rx="1.2"/>
+    <rect class="ink" x="4.44" y="-29.55" width="7.56" height="8.65" rx="1.2"/>
+    <rect class="ink" x="4.44" y="-19.1" width="7.56" height="8.65" rx="1.2"/>
+    <rect class="ink" x="4.44" y="-8.65" width="7.56" height="8.65" rx="1.2"/>
+    <path class="korange draw" pathLength="100" style="animation-delay:.15s" d="M 8.2 -20.6 C 17.5 -15.5, 26.5 -8.5, 32.6 -2.6"/>
   </g>
 </svg>
