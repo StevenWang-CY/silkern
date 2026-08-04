@@ -6,14 +6,18 @@
     .sub   { fill: #0b0b0b; fill-opacity: .55; }
     .inkS  { stroke: #0b0b0b; }
     .thread{ fill: none; stroke-width: 5.2; stroke-linecap: round; }
-    .kblue  { fill: none; stroke: url(#gBlue);   stroke-width: 7; stroke-linecap: round; }
-    .korange{ fill: none; stroke: url(#gOrange); stroke-width: 7; stroke-linecap: round; }
+    .kbB { fill: #2a78d6; }
+    .kbO { fill: #eb6834; }
+    .kb  { animation: kbin .45s cubic-bezier(.3,0,.4,1) both; }
+    @keyframes kbin { from { opacity: 0; } to { opacity: 1; } }
     .draw   { stroke-dasharray: 100; stroke-dashoffset: 0; animation: weave 1.5s cubic-bezier(.55,0,.2,1) both; }
     @keyframes weave { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
-    @media (prefers-reduced-motion: reduce) { .draw { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .draw, .kb { animation: none; } }
     @media (prefers-color-scheme: dark) {
       .ink  { fill: #f2f2f0; }
       .soft { fill: #c9c9c6; }
+      .kbB  { fill: #3987e5; }
+      .kbO  { fill: #ee7a42; }
       .sub  { fill: #f2f2f0; }
       .inkS { stroke: #f2f2f0; }
     }

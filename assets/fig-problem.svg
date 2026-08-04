@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550" role="img"
      aria-label="Three replays of byte-identical input. Panel a: the atomic converter returns three different orders, shaded where positions changed. Panel b: silkern returns the selector's order every time. Both return the same set and count.">
   <style>
-    text  { font-family: "Times New Roman", Times, Georgia, serif; }
+    text  { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .fh   { fill: #0b0b0b; font-size: 16.5px; font-weight: 700; }
-    .ph   { fill: #0b0b0b; font-size: 14px; font-weight: 700; }
-    .lab  { fill: #0b0b0b; font-size: 12.5px; }
+    .fh   { fill: #0b0b0b; font-size: 15px; font-weight: 650; }
+    .ph   { fill: #0b0b0b; font-size: 13.5px; font-weight: 650; }
+    .lab  { fill: #0b0b0b; font-size: 12px; }
     .note { fill: #0b0b0b; font-size: 12.5px; }
-    .noteB{ fill: #0b0b0b; font-size: 12.5px; font-weight: 700; }
-    .mut  { fill: #78776f; font-size: 12px; }
+    .noteB{ fill: #0b0b0b; font-size: 12.5px; font-weight: 650; }
+    .mut  { fill: #78776f; font-size: 11.5px; }
     .mutS { fill: #78776f; font-size: 10.5px; }
     .val  { fill: #0b0b0b; font-size: 12px; }
     .drpv { fill: #a5a49d; font-size: 12px; }
@@ -26,7 +26,7 @@
     .band { fill: #2a78d6; fill-opacity: .06; }
     .chg  { fill: #e0762f; fill-opacity: .10; }
     .marg { stroke: #c2453a; stroke-width: 1; stroke-dasharray: 4 3; }
-    .margT{ fill: #c2453a; font-size: 11.5px; font-style: italic; }
+    .margT{ fill: #c2453a; font-size: 11px; }
     .sep  { stroke: #dcdbd5; stroke-width: 1; }
     @media (prefers-color-scheme: dark) {
       .fh,.ph,.lab,.note,.noteB,.val { fill: #f0f0ee; }
@@ -172,7 +172,7 @@
   <text class="val mono" x="445.0" y="427.5" text-anchor="middle">897</text>
   <rect class="cell" x="474" y="410" width="46" height="26"/>
   <text class="val mono" x="497.0" y="427.5" text-anchor="middle">260</text>
-  <text class="mut" x="540" y="389" font-style="italic">= the selector's order, every replay</text>
+  <text class="mut" x="540" y="389">= the selector's order, every replay</text>
   <text class="noteB" x="110" y="464">1 permutation, always.<tspan class="mut" font-weight="400">&#160;&#160;Free-running generations were bitwise-identical across sessions.</tspan></text>
   <line class="sep" x1="24" y1="492" x2="876" y2="492"/>
   <text class="mut" x="24" y="514">Both converters return the same set and the same count; only the order differs. Shaded cells mark positions that changed relative to replay 1.</text>

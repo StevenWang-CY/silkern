@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 532" width="900" height="532" role="img"
      aria-label="The localization contract in five stages with one worked example: request routing, ownership filter, deinterleave, paged translation, stable front compaction, ending in physical prefix 708 129 451 with exact count 3.">
   <style>
-    text  { font-family: "Times New Roman", Times, Georgia, serif; }
+    text  { font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .fh   { fill: #0b0b0b; font-size: 16.5px; font-weight: 700; }
-    .ph   { fill: #0b0b0b; font-size: 14px; font-weight: 700; }
-    .lab  { fill: #0b0b0b; font-size: 12.5px; }
+    .fh   { fill: #0b0b0b; font-size: 15px; font-weight: 650; }
+    .ph   { fill: #0b0b0b; font-size: 13.5px; font-weight: 650; }
+    .lab  { fill: #0b0b0b; font-size: 12px; }
     .note { fill: #0b0b0b; font-size: 12.5px; }
-    .noteB{ fill: #0b0b0b; font-size: 12.5px; font-weight: 700; }
-    .mut  { fill: #78776f; font-size: 12px; }
+    .noteB{ fill: #0b0b0b; font-size: 12.5px; font-weight: 650; }
+    .mut  { fill: #78776f; font-size: 11.5px; }
     .mutS { fill: #78776f; font-size: 10.5px; }
     .val  { fill: #0b0b0b; font-size: 12px; }
     .drpv { fill: #a5a49d; font-size: 12px; }
@@ -26,7 +26,7 @@
     .band { fill: #2a78d6; fill-opacity: .06; }
     .chg  { fill: #e0762f; fill-opacity: .10; }
     .marg { stroke: #c2453a; stroke-width: 1; stroke-dasharray: 4 3; }
-    .margT{ fill: #c2453a; font-size: 11.5px; font-style: italic; }
+    .margT{ fill: #c2453a; font-size: 11px; }
     .sep  { stroke: #dcdbd5; stroke-width: 1; }
     @media (prefers-color-scheme: dark) {
       .fh,.ph,.lab,.note,.noteB,.val { fill: #f0f0ee; }
@@ -89,7 +89,7 @@
   <text class="drpv mono" x="273.0" y="238.5" text-anchor="middle">-1</text>
   <rect class="cell" x="304" y="221" width="50" height="26"/>
   <text class="val mono" x="329.0" y="238.5" text-anchor="middle">262</text>
-  <g class="mutS" text-anchor="middle" font-style="italic"><text x="105" y="265">rank 1</text><text x="217" y="265">rank 1</text><text x="273" y="265">invalid</text></g>
+  <g class="mutS" text-anchor="middle"><text x="105" y="265">rank 1</text><text x="217" y="265">rank 1</text><text x="273" y="265">invalid</text></g>
   <line class="axis" x1="224" y1="271" x2="224" y2="291"/><path class="axis" fill="none" d="M 220 287 L 224 292 L 228 287"/>
   <text class="ph" x="24" y="306" font-size="13">Stage 3&#160;&#160;&#183;&#160;&#160;deinterleave to this rank's local index space</text>
   <text class="mutS mono" x="24" y="323">local = (token // (dcp_size*interleave)) * interleave + token % interleave</text>
@@ -116,7 +116,7 @@
   <rect class="drop" x="304" y="441" width="50" height="26"/>
   <text class="drpv mono" x="329.0" y="458.5" text-anchor="middle">-1</text>
   <text class="noteB mono" x="390" y="458" font-size="13">count = 3</text>
-  <text class="mut" x="390" y="474" font-style="italic">exact, not an upper bound</text>
+  <text class="mut" x="390" y="474">exact, not an upper bound</text>
   <line class="sep" x1="24" y1="492" x2="876" y2="492"/>
   <text class="mut" x="24" y="514">The reference oracle defines every stage in pure Python; both GPU kernels must reproduce it elementwise &#8212; set, count, and order.</text>
 </svg>
