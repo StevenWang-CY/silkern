@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern/main/assets/logo-text.svg" width="440" alt="SILKern — Sparse-Index Localization Kernels">
+<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern./main/assets/logo-text.svg" width="440" alt="SILKern — Sparse-Index Localization Kernels">
 
 **Order, woven in.**
 
 Deterministic sparse-index localization for context-parallel decode.
 
-[![CI](https://github.com/StevenWang-CY/SILKern/actions/workflows/ci.yml/badge.svg)](https://github.com/StevenWang-CY/SILKern/actions/workflows/ci.yml)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-2a78d6.svg)](https://github.com/StevenWang-CY/SILKern/blob/main/pyproject.toml)
-[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-0b0b0b.svg)](https://github.com/StevenWang-CY/SILKern/blob/main/LICENSE)
-[![Evidence](https://img.shields.io/badge/evidence-checksummed-eb6834.svg)](https://github.com/StevenWang-CY/SILKern/tree/main/evidence)
+[![CI](https://github.com/StevenWang-CY/SILKern./actions/workflows/ci.yml/badge.svg)](https://github.com/StevenWang-CY/SILKern./actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-2a78d6.svg)](https://github.com/StevenWang-CY/SILKern./blob/main/pyproject.toml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-0b0b0b.svg)](https://github.com/StevenWang-CY/SILKern./blob/main/LICENSE)
+[![Evidence](https://img.shields.io/badge/evidence-checksummed-eb6834.svg)](https://github.com/StevenWang-CY/SILKern./tree/main/evidence)
 
 [**The contract**](docs/contract.md) · [**Determinism**](docs/determinism.md) · [**Choosing a kernel**](docs/dispatch.md) · [**Evidence**](docs/evidence.md) · [**vLLM integration**](docs/integration-vllm.md) · [**Citation**](#license-and-citation)
 
@@ -17,7 +17,7 @@ Deterministic sparse-index localization for context-parallel decode.
 
 ---
 
-<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern/main/assets/fig-problem.svg" alt="Three replays of byte-identical input. The atomic converter returns three different orders; SILKern returns one. Both return the same set and count." width="100%">
+<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern./main/assets/fig-problem.svg" alt="Three replays of byte-identical input. The atomic converter returns three different orders; SILKern returns one. Both return the same set and count." width="100%">
 
 ## Why SILKern?
 
@@ -139,7 +139,7 @@ python -m bench.bench_converter --with-atomic  # prices each converter on your d
 
 ## The contract
 
-<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern/main/assets/fig-contract.svg" alt="The localization contract in five stages, with one worked example carried through all five: request routing, ownership filter, deinterleave, paged translation, stable front compaction." width="100%">
+<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern./main/assets/fig-contract.svg" alt="The localization contract in five stages, with one worked example carried through all five: request routing, ownership filter, deinterleave, paged translation, stable front compaction." width="100%">
 
 Request routing, ownership filtering, deinterleaving, paged address translation,
 and stable front compaction — with an exact valid count, fragmented non-identity
@@ -150,7 +150,7 @@ deliberately boring Python.
 
 ## What it costs
 
-<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern/main/assets/fig-cost.svg" alt="Panel a: converter segment time — row-wide 120.0 microseconds, atomic 194.4, hierarchical 239.7. Panel b: forest plot of complete decode step ratios versus the atomic baseline with 98.75 percent intervals; three contrasts sit on 1.00 inside the prespecified 1.01 margin, while row-wide at 64K exceeds it at 1.014." width="100%">
+<img src="https://raw.githubusercontent.com/StevenWang-CY/SILKern./main/assets/fig-cost.svg" alt="Panel a: converter segment time — row-wide 120.0 microseconds, atomic 194.4, hierarchical 239.7. Panel b: forest plot of complete decode step ratios versus the atomic baseline with 98.75 percent intervals; three contrasts sit on 1.00 inside the prespecified 1.01 margin, while row-wide at 64K exceeds it at 1.014." width="100%">
 
 Less than nothing, at the converter. The row-wide kernel does the atomic
 baseline's work in 38% less time, because a row-wide scan beats a scan *plus*
@@ -267,6 +267,6 @@ release — see [`CITATION.cff`](CITATION.cff):
   year    = {2026},
   version = {0.1.0},
   license = {Apache-2.0},
-  url     = {https://github.com/StevenWang-CY/SILKern}
+  url     = {https://github.com/StevenWang-CY/SILKern.}
 }
 ```
