@@ -233,6 +233,25 @@ python -m pytest -q                   # adds the CUDA suites
 python -m silkern                     # the conformance matrix on your device
 ```
 
+## Media kit
+
+<details>
+<summary>Logo and brand assets</summary>
+<br>
+
+All marks live in [`assets/`](assets/) as self-contained SVGs (light/dark aware); `cover.png` is the 2:1 card used for social previews.
+
+<img src="assets/cover.png" alt="SILKern cover: the weave mark and wordmark over a warm paper background" width="60%">
+
+| Asset | File |
+|---|---|
+| Lockup (mark + wordmark) | [`assets/logo-text.svg`](assets/logo-text.svg) |
+| Square icon | [`assets/logo.svg`](assets/logo.svg) |
+| K icon | [`assets/logo-k.svg`](assets/logo-k.svg) |
+| Social banner | [`assets/banner.svg`](assets/banner.svg) · [`assets/cover.png`](assets/cover.png) |
+
+</details>
+
 ## License and citation
 
 Apache-2.0. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
